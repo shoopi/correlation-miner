@@ -1,0 +1,7 @@
+<root>
+  <facet id="jpt.jaxb">
+    <node name="classgen">
+      <attribute name="package" value="main.java.nl.tue.ieis.is.correlation.schema.xes"/>
+    </node>
+  </facet>
+</root>

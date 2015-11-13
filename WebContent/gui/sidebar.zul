@@ -1,0 +1,9 @@
+<div hflex="1" vflex="1" apply="main.java.nl.tue.ieis.is.bpmGame.controller.SidebarController">
+	<grid vflex="1" sclass="sidebar" id="sidebarGrid" emptyMessage="No Process Definition in the repository">
+		<columns>
+			<column/>
+		</columns>
+		<rows/>
+	</grid>
+	<timer id="sidebarTimer" delay="2000" onClientInfo="self.start()" repeats="true"/>
+</div>

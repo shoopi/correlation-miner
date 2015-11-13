@@ -1,0 +1,8 @@
+<hlayout sclass="footer" height="100%">
+	<div style="text-align:center;">
+		<vbox align="center" style="font-weight: bold;">
+			<label>Information Systems Group &#169; - School of IE&amp;IS</label>
+			<label>Eindhoven University of Technology (TU/e)</label>
+		</vbox>
+	</div>
+</hlayout>

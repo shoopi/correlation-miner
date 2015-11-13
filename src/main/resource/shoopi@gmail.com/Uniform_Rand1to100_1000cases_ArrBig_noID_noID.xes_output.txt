@@ -1,0 +1,176 @@
+===***=== Time mapping is set to **EQUAL_SIZE** method. ===***=== 
+# of events in the log: 6831
+**** Threshold is manually set to 1.0 of all values.
+Before P/S threshold we had 132 elements.
+After P/S threshold we have 132 elements. [Removed: 0]
+
+=================== Duration Matrix ===================
+
+
+ FINAL SELECTED EDGE LIST:
+Edge (A --> B) 		** Std. Deviation: -6949039.715628922 		** P/S Fraction: 0.5349884386028965 		** Edge-Ratio: -1.2989139978007928E7
+Edge (A --> F) 		** Std. Deviation: -4633543.534470677 		** P/S Fraction: 0.5347558424481501 		** Edge-Ratio: -8664783.37713523
+Edge (A --> E) 		** Std. Deviation: -4633050.282665253 		** P/S Fraction: 0.5347558424481501 		** Edge-Ratio: -8663860.990194742
+Edge (C --> B) 		** Std. Deviation: -3945399.3878310323 		** P/S Fraction: 0.5126047668936616 		** Edge-Ratio: -7696766.87117015
+Edge (D --> B) 		** Std. Deviation: -3944640.128056526 		** P/S Fraction: 0.5126047668936616 		** Edge-Ratio: -7695285.691470814
+Edge (D --> A OR B) 		** Std. Deviation: -2426476.161194861 		** P/S Fraction: 0.4914839421541929 		** Edge-Ratio: -4937040.568527068
+Edge (C --> A OR B) 		** Std. Deviation: -2426414.147394657 		** P/S Fraction: 0.4914839421541929 		** Edge-Ratio: -4936914.3918712605
+Edge (C --> F) 		** Std. Deviation: -2181278.964592755 		** P/S Fraction: 0.5143426807306406 		** Edge-Ratio: -4240906.007438809
+Edge (C --> E) 		** Std. Deviation: -2180785.71278733 		** P/S Fraction: 0.5143426807306406 		** Edge-Ratio: -4239947.012932026
+Edge (D --> F) 		** Std. Deviation: -2180526.484927416 		** P/S Fraction: 0.5143426807306406 		** Edge-Ratio: -4239443.014586903
+Edge (D --> E) 		** Std. Deviation: -2180033.233121991 		** P/S Fraction: 0.5143426807306406 		** Edge-Ratio: -4238484.020080119
+Edge ({A OR B} OR CD --> B) 		** Std. Deviation: -1589506.9772098064 		** P/S Fraction: 0.517485102866339 		** Edge-Ratio: -3071599.488382489
+Edge (EVENT 1 START --> B) 		** Std. Deviation: -1480720.2838613987 		** P/S Fraction: 0.5153012048192771 		** Edge-Ratio: -2873504.4087092844
+Edge (A OR B --> B) 		** Std. Deviation: -1461821.9823402166 		** P/S Fraction: 0.5213640740066096 		** Edge-Ratio: -2803841.0301391124
+Edge (Start --> B) 		** Std. Deviation: -1428077.065496862 		** P/S Fraction: 0.5153012048192771 		** Edge-Ratio: -2771344.3169567348
+Edge (Other OR EF --> B) 		** Std. Deviation: -1402175.9011628628 		** P/S Fraction: 0.5142650602409639 		** Edge-Ratio: -2726562.641657708
+Edge (EVENT 16 END --> B) 		** Std. Deviation: -1402175.9011628628 		** P/S Fraction: 0.5142650602409639 		** Edge-Ratio: -2726562.641657708
+Edge (Start --> F) 		** Std. Deviation: -1211645.786762774 		** P/S Fraction: 0.5163254437869822 		** Edge-Ratio: -2346670.692569349
+Edge (Start --> E) 		** Std. Deviation: -1211152.5349573493 		** P/S Fraction: 0.5163254437869822 		** Edge-Ratio: -2345715.3807377126
+Edge (A --> C) 		** Std. Deviation: -1190287.2913800478 		** P/S Fraction: 0.5203209632557458 		** Edge-Ratio: -2287602.0292017395
+Edge (A --> D) 		** Std. Deviation: -1190062.7837566733 		** P/S Fraction: 0.5203209632557458 		** Edge-Ratio: -2287170.5500970543
+Edge (A --> Other OR EF) 		** Std. Deviation: -1175932.1459320188 		** P/S Fraction: 0.5196902356902356 		** Edge-Ratio: -2262755.8979825433
+Edge (A --> EVENT 16 END) 		** Std. Deviation: -1175932.1459320188 		** P/S Fraction: 0.5196902356902356 		** Edge-Ratio: -2262755.8979825433
+Edge (A OR B --> F) 		** Std. Deviation: -1033061.8909001946 		** P/S Fraction: 0.5227804260866231 		** Edge-Ratio: -1976091.3747926352
+Edge (A OR B --> E) 		** Std. Deviation: -1032568.63909477 		** P/S Fraction: 0.5227804260866231 		** Edge-Ratio: -1975147.8585842778
+Edge (E --> B) 		** Std. Deviation: -1020392.6230255365 		** P/S Fraction: 0.4986454694517716 		** Edge-Ratio: -2046328.8759996
+Edge (F --> B) 		** Std. Deviation: -1018777.0403535366 		** P/S Fraction: 0.4986454694517716 		** Edge-Ratio: -2043088.933453293
+Edge (A --> EVENT 1 START) 		** Std. Deviation: -995282.6189841628 		** P/S Fraction: 0.5186565656565657 		** Edge-Ratio: -1918962.729651822
+Edge (A --> A OR B) 		** Std. Deviation: -993563.4088328481 		** P/S Fraction: 0.5136243645962868 		** Edge-Ratio: -1934416.428266205
+Edge (A --> {A OR B} OR CD) 		** Std. Deviation: -949612.7220106721 		** P/S Fraction: 0.5165939377732398 		** Edge-Ratio: -1838218.8650992396
+Edge ({A OR B} OR CD --> F) 		** Std. Deviation: -885599.9576869607 		** P/S Fraction: 0.5190438553393288 		** Edge-Ratio: -1706214.125409486
+Edge ({A OR B} OR CD --> E) 		** Std. Deviation: -885106.705881536 		** P/S Fraction: 0.5190438553393288 		** Edge-Ratio: -1705263.8168751479
+Edge (A --> Start) 		** Std. Deviation: -880245.0067635179 		** P/S Fraction: 0.5186599326599327 		** Edge-Ratio: -1697152.5104112176
+Edge (EVENT 1 START --> F) 		** Std. Deviation: -840954.2431365252 		** P/S Fraction: 0.5163254437869822 		** Edge-Ratio: -1628729.0375786196
+Edge (EVENT 1 START --> E) 		** Std. Deviation: -840460.9913311005 		** P/S Fraction: 0.5163254437869822 		** Edge-Ratio: -1627773.725746983
+Edge (Other OR EF --> E) 		** Std. Deviation: -668179.9145000577 		** P/S Fraction: 0.5152781065088757 		** Edge-Ratio: -1296736.4731001786
+Edge (EVENT 16 END --> E) 		** Std. Deviation: -668179.9145000577 		** P/S Fraction: 0.5152781065088757 		** Edge-Ratio: -1296736.4731001786
+Edge (Other OR EF --> F) 		** Std. Deviation: -656695.4601035118 		** P/S Fraction: 0.5153254437869822 		** Edge-Ratio: -1274331.5278159778
+Edge (EVENT 16 END --> F) 		** Std. Deviation: -656695.4601035118 		** P/S Fraction: 0.5153254437869822 		** Edge-Ratio: -1274331.5278159778
+Edge (A OR B --> Other OR EF) 		** Std. Deviation: -641570.7254416347 		** P/S Fraction: 0.5074859611231102 		** Edge-Ratio: -1264213.7410496704
+Edge (A OR B --> EVENT 16 END) 		** Std. Deviation: -641570.7254416347 		** P/S Fraction: 0.5074859611231102 		** Edge-Ratio: -1264213.7410496704
+Edge (C --> Other OR EF) 		** Std. Deviation: -486343.096796751 		** P/S Fraction: 0.49899456521739133 		** Edge-Ratio: -974646.0797320937
+Edge (C --> EVENT 16 END) 		** Std. Deviation: -486343.096796751 		** P/S Fraction: 0.49899456521739133 		** Edge-Ratio: -974646.0797320937
+Edge (D --> Other OR EF) 		** Std. Deviation: -485111.51882356405 		** P/S Fraction: 0.49898097826086957 		** Edge-Ratio: -972204.4325504238
+Edge (D --> EVENT 16 END) 		** Std. Deviation: -485111.51882356405 		** P/S Fraction: 0.49898097826086957 		** Edge-Ratio: -972204.4325504238
+Edge (EVENT 1 START --> Other OR EF) 		** Std. Deviation: -443059.1446148157 		** P/S Fraction: 0.500775 		** Edge-Ratio: -884746.9314858285
+Edge (EVENT 1 START --> EVENT 16 END) 		** Std. Deviation: -443059.1446148157 		** P/S Fraction: 0.500775 		** Edge-Ratio: -884746.9314858285
+Edge (A OR B --> Start) 		** Std. Deviation: -424874.35362654924 		** P/S Fraction: 0.5064816414686825 		** Edge-Ratio: -838874.1443707801
+Edge ({A OR B} OR CD --> A OR B) 		** Std. Deviation: -398857.56335246563 		** P/S Fraction: 0.49562706463627315 		** Edge-Ratio: -804753.3958727134
+Edge ({A OR B} OR CD --> Other OR EF) 		** Std. Deviation: -376311.9805570245 		** P/S Fraction: 0.5037184115523465 		** Edge-Ratio: -747068.1474542808
+Edge ({A OR B} OR CD --> EVENT 16 END) 		** Std. Deviation: -376311.9805570245 		** P/S Fraction: 0.5037184115523465 		** Edge-Ratio: -747068.1474542808
+Edge (D --> EVENT 1 START) 		** Std. Deviation: -328654.9818583131 		** P/S Fraction: 0.49798097826086957 		** Edge-Ratio: -659974.9713454832
+Edge (C --> EVENT 1 START) 		** Std. Deviation: -328592.9680581093 		** P/S Fraction: 0.49798097826086957 		** Edge-Ratio: -659850.4408856644
+Edge (Start --> Other OR EF) 		** Std. Deviation: -327471.4349772334 		** P/S Fraction: 0.500602 		** Edge-Ratio: -654155.2670129832
+Edge (Start --> EVENT 16 END) 		** Std. Deviation: -327471.4349772334 		** P/S Fraction: 0.500602 		** Edge-Ratio: -654155.2670129832
+Edge (D --> Start) 		** Std. Deviation: -320267.2772552371 		** P/S Fraction: 0.49798097826086957 		** Edge-Ratio: -643131.5476621753
+Edge (C --> Start) 		** Std. Deviation: -320205.2634550333 		** P/S Fraction: 0.49798097826086957 		** Edge-Ratio: -643007.0172023566
+Edge (A OR B --> EVENT 1 START) 		** Std. Deviation: -260854.5788820982 		** P/S Fraction: 0.5064233261339093 		** Edge-Ratio: -515091.9505890268
+Edge ({A OR B} OR CD --> Start) 		** Std. Deviation: -207088.48128932714 		** P/S Fraction: 0.5026847172081829 		** Edge-Ratio: -411964.9438309124
+Edge ({A OR B} OR CD --> C) 		** Std. Deviation: -197948.3553276062 		** P/S Fraction: 0.5041431224820803 		** Edge-Ratio: -392643.17313907674
+Edge ({A OR B} OR CD --> D) 		** Std. Deviation: -197886.3415274024 		** P/S Fraction: 0.5041431224820803 		** Edge-Ratio: -392520.16481576866
+Edge (D --> {A OR B} OR CD) 		** Std. Deviation: -156049.55498558283 		** P/S Fraction: 0.49585687751791974 		** Edge-Ratio: -314706.8480056392
+Edge (C --> {A OR B} OR CD) 		** Std. Deviation: -155987.54118537903 		** P/S Fraction: 0.49585687751791974 		** Edge-Ratio: -314581.78409503214
+Edge ({A OR B} OR CD --> EVENT 1 START) 		** Std. Deviation: -121635.72544693947 		** P/S Fraction: 0.5025956678700361 		** Edge-Ratio: -242015.06941439197
+Edge (EVENT 1 START --> Start) 		** Std. Deviation: -115587.7096375823 		** P/S Fraction: 0.5005 		** Edge-Ratio: -230944.47480036426
+Edge (EVENT 1 START --> A OR B) 		** Std. Deviation: -72916.65495932102 		** P/S Fraction: 0.4935766738660907 		** Edge-Ratio: -147731.16077017772
+Edge (Start --> C) 		** Std. Deviation: -24607.163609981537 		** P/S Fraction: 0.5020190217391305 		** Edge-Ratio: -49016.39687822112
+Edge (Start --> D) 		** Std. Deviation: -24545.149809777737 		** P/S Fraction: 0.5020190217391305 		** Edge-Ratio: -48892.8680924214
+Edge (EVENT 1 START --> C) 		** Std. Deviation: -20596.351027548313 		** P/S Fraction: 0.5020190217391305 		** Edge-Ratio: -41027.0331116079
+Edge (EVENT 1 START --> D) 		** Std. Deviation: -20534.337227344513 		** P/S Fraction: 0.5020190217391305 		** Edge-Ratio: -40903.50432580818
+Edge (EVENT 1 START --> {A OR B} OR CD) 		** Std. Deviation: -6632.333030641079 		** P/S Fraction: 0.4974043321299639 		** Edge-Ratio: -13333.886744090833
+Edge (E --> F) 		** Std. Deviation: -493.25180542469025 		** P/S Fraction: 0.5029585798816568 		** Edge-Ratio: -980.7006484326193
+Edge (D --> C) 		** Std. Deviation: -62.0138002038002 		** P/S Fraction: 0.4986413043478261 		** Edge-Ratio: -124.36555027247124
+Edge (Other OR EF --> EVENT 16 END) 		** Std. Deviation: 0.0 		** P/S Fraction: 0.4995 		** Edge-Ratio: 0.0
+Edge (EVENT 16 END --> Other OR EF) 		** Std. Deviation: 0.0 		** P/S Fraction: 0.4995 		** Edge-Ratio: 0.0
+Edge (C --> D) 		** Std. Deviation: 62.0138002038002 		** P/S Fraction: 0.501358695652174 		** Edge-Ratio: 123.69148224931422
+Edge (F --> E) 		** Std. Deviation: 493.25180542469025 		** P/S Fraction: 0.4970414201183432 		** Edge-Ratio: 992.3756561520554
+Edge (Start --> {A OR B} OR CD) 		** Std. Deviation: 37813.218085348606 		** P/S Fraction: 0.4973152827918171 		** Edge-Ratio: 76034.69950304691
+Edge (A OR B --> {A OR B} OR CD) 		** Std. Deviation: 59203.52894002199 		** P/S Fraction: 0.5043729353637268 		** Edge-Ratio: 117380.463520168
+Edge (Start --> A OR B) 		** Std. Deviation: 95989.98330497742 		** P/S Fraction: 0.4935183585313175 		** Edge-Ratio: 194501.34254506385
+Edge (Start --> EVENT 1 START) 		** Std. Deviation: 115587.7096375823 		** P/S Fraction: 0.4995 		** Edge-Ratio: 231406.82610126588
+Edge (Other OR EF --> D) 		** Std. Deviation: 135668.21965640783 		** P/S Fraction: 0.5010190217391305 		** Edge-Ratio: 270784.56858878955
+Edge (EVENT 16 END --> D) 		** Std. Deviation: 135668.21965640783 		** P/S Fraction: 0.5010190217391305 		** Edge-Ratio: 270784.56858878955
+Edge (Other OR EF --> C) 		** Std. Deviation: 136871.5080962777 		** P/S Fraction: 0.5010054347826087 		** Edge-Ratio: 273193.6593775028
+Edge (EVENT 16 END --> C) 		** Std. Deviation: 136871.5080962777 		** P/S Fraction: 0.5010054347826087 		** Edge-Ratio: 273193.6593775028
+Edge (A OR B --> C) 		** Std. Deviation: 152522.42496204376 		** P/S Fraction: 0.5085160578458071 		** Edge-Ratio: 299936.3001596536
+Edge (A OR B --> D) 		** Std. Deviation: 152584.43876224756 		** P/S Fraction: 0.5085160578458071 		** Edge-Ratio: 300058.25068461144
+Edge (Start --> A) 		** Std. Deviation: 178044.78663033247 		** P/S Fraction: 0.48134006734006735 		** Edge-Ratio: 369893.9662642786
+Edge (Other OR EF --> {A OR B} OR CD) 		** Std. Deviation: 203403.45804715157 		** P/S Fraction: 0.4962815884476534 		** Edge-Ratio: 409854.93474256917
+Edge (EVENT 16 END --> {A OR B} OR CD) 		** Std. Deviation: 203403.45804715157 		** P/S Fraction: 0.4962815884476534 		** Edge-Ratio: 409854.93474256917
+Edge ({A OR B} OR CD --> A) 		** Std. Deviation: 239426.02598434687 		** P/S Fraction: 0.4834060622267602 		** Edge-Ratio: 495289.66368658177
+Edge (A OR B --> A) 		** Std. Deviation: 273058.8120031357 		** P/S Fraction: 0.48637563540371315 		** Edge-Ratio: 561415.4824521275
+Edge (EVENT 1 START --> A) 		** Std. Deviation: 290458.67799806595 		** P/S Fraction: 0.48134343434343435 		** Edge-Ratio: 603433.3435840037
+Edge (F --> Other OR EF) 		** Std. Deviation: 294310.5356363654 		** P/S Fraction: 0.48467455621301775 		** Edge-Ratio: 607233.3112262941
+Edge (F --> EVENT 16 END) 		** Std. Deviation: 294310.5356363654 		** P/S Fraction: 0.48467455621301775 		** Edge-Ratio: 607233.3112262941
+Edge (E --> Other OR EF) 		** Std. Deviation: 304704.1456800103 		** P/S Fraction: 0.48472189349112427 		** Edge-Ratio: 628616.4288669369
+Edge (E --> EVENT 16 END) 		** Std. Deviation: 304704.1456800103 		** P/S Fraction: 0.48472189349112427 		** Edge-Ratio: 628616.4288669369
+Edge (Other OR EF --> A OR B) 		** Std. Deviation: 308688.6744798422 		** P/S Fraction: 0.4925140388768898 		** Edge-Ratio: 626761.1684405261
+Edge (EVENT 16 END --> A OR B) 		** Std. Deviation: 308688.6744798422 		** P/S Fraction: 0.4925140388768898 		** Edge-Ratio: 626761.1684405261
+Edge (Other OR EF --> Start) 		** Std. Deviation: 327471.4349772334 		** P/S Fraction: 0.499398 		** Edge-Ratio: 655732.3717300298
+Edge (EVENT 16 END --> Start) 		** Std. Deviation: 327471.4349772334 		** P/S Fraction: 0.499398 		** Edge-Ratio: 655732.3717300298
+Edge (Other OR EF --> EVENT 1 START) 		** Std. Deviation: 443059.1446148157 		** P/S Fraction: 0.499225 		** Edge-Ratio: 887493.9047820437
+Edge (EVENT 16 END --> EVENT 1 START) 		** Std. Deviation: 443059.1446148157 		** P/S Fraction: 0.499225 		** Edge-Ratio: 887493.9047820437
+Edge (Other OR EF --> A) 		** Std. Deviation: 467180.9275481701 		** P/S Fraction: 0.4803097643097643 		** Edge-Ratio: 972665.8966001634
+Edge (EVENT 16 END --> A) 		** Std. Deviation: 467180.9275481701 		** P/S Fraction: 0.4803097643097643 		** Edge-Ratio: 972665.8966001634
+Edge (E --> EVENT 1 START) 		** Std. Deviation: 474114.76587355137 		** P/S Fraction: 0.48367455621301775 		** Edge-Ratio: 980235.0770437134
+Edge (F --> EVENT 1 START) 		** Std. Deviation: 474608.01767897606 		** P/S Fraction: 0.48367455621301775 		** Edge-Ratio: 981254.8780629911
+Edge (C --> A) 		** Std. Deviation: 684779.725649476 		** P/S Fraction: 0.47967903674425416 		** Edge-Ratio: 1427579.0126191683
+Edge (D --> A) 		** Std. Deviation: 685007.0082300305 		** P/S Fraction: 0.47967903674425416 		** Edge-Ratio: 1428052.834827654
+Edge (E --> A) 		** Std. Deviation: 858563.6303077936 		** P/S Fraction: 0.46524415755184984 		** Edge-Ratio: 1845404.4319989332
+Edge (F --> A) 		** Std. Deviation: 859056.8821132183 		** P/S Fraction: 0.46524415755184984 		** Edge-Ratio: 1846464.6318905777
+Edge (E --> Start) 		** Std. Deviation: 860132.8462123275 		** P/S Fraction: 0.48367455621301775 		** Edge-Ratio: 1778329.7367279988
+Edge (F --> Start) 		** Std. Deviation: 860626.0980177522 		** P/S Fraction: 0.48367455621301775 		** Edge-Ratio: 1779349.5377472765
+Edge (B --> F) 		** Std. Deviation: 892775.6252701283 		** P/S Fraction: 0.5013545305482284 		** Edge-Ratio: 1780727.1518896678
+Edge (B --> E) 		** Std. Deviation: 894047.3545479774 		** P/S Fraction: 0.5013545305482284 		** Edge-Ratio: 1783263.7386767834
+Edge (E --> A OR B) 		** Std. Deviation: 914546.1839846373 		** P/S Fraction: 0.4772195739133769 		** Edge-Ratio: 1916405.4325873947
+Edge (F --> A OR B) 		** Std. Deviation: 915039.435790062 		** P/S Fraction: 0.4772195739133769 		** Edge-Ratio: 1917439.027671058
+Edge (B --> Other OR EF) 		** Std. Deviation: 1005009.7054105401 		** P/S Fraction: 0.48573493975903614 		** Edge-Ratio: 2069049.6465193678
+Edge (B --> EVENT 16 END) 		** Std. Deviation: 1005009.7054105401 		** P/S Fraction: 0.48573493975903614 		** Edge-Ratio: 2069049.6465193678
+Edge (E --> {A OR B} OR CD) 		** Std. Deviation: 1015469.2778505087 		** P/S Fraction: 0.48095614466067116 		** Edge-Ratio: 2111355.2433495834
+Edge (F --> {A OR B} OR CD) 		** Std. Deviation: 1015962.5296559334 		** P/S Fraction: 0.48095614466067116 		** Edge-Ratio: 2112380.808384775
+Edge (B --> Start) 		** Std. Deviation: 1040657.6571416855 		** P/S Fraction: 0.4846987951807229 		** Edge-Ratio: 2147019.277722095
+Edge (B --> A OR B) 		** Std. Deviation: 1058084.7044602633 		** P/S Fraction: 0.4786359259933904 		** Edge-Ratio: 2210625.3354556477
+Edge (B --> EVENT 1 START) 		** Std. Deviation: 1084979.927646935 		** P/S Fraction: 0.4846987951807229 		** Edge-Ratio: 2238462.1922618845
+Edge (B --> {A OR B} OR CD) 		** Std. Deviation: 1190815.733946085 		** P/S Fraction: 0.482514897133661 		** Edge-Ratio: 2467935.68658714
+Edge (E --> D) 		** Std. Deviation: 1435258.7609329224 		** P/S Fraction: 0.4856573192693594 		** Edge-Ratio: 2955291.1157442825
+Edge (E --> C) 		** Std. Deviation: 1435473.98118788 		** P/S Fraction: 0.4856573192693594 		** Edge-Ratio: 2955734.2682438297
+Edge (F --> D) 		** Std. Deviation: 1435752.012738347 		** P/S Fraction: 0.4856573192693594 		** Edge-Ratio: 2956306.753285104
+Edge (F --> C) 		** Std. Deviation: 1435967.2329933047 		** P/S Fraction: 0.4856573192693594 		** Edge-Ratio: 2956749.905784651
+Edge (B --> D) 		** Std. Deviation: 1615374.5685779452 		** P/S Fraction: 0.4873952331063384 		** Edge-Ratio: 3314301.1233052164
+Edge (B --> C) 		** Std. Deviation: 1615836.759223938 		** P/S Fraction: 0.4873952331063384 		** Edge-Ratio: 3315249.4104746394
+Edge (B --> A) 		** Std. Deviation: 2608091.9413481355 		** P/S Fraction: 0.4650115613971036 		** Edge-Ratio: 5608660.424511287
+======================================
+
+
+=================== Starting ILP ===================
+User Shaya has been logged out.
+number of process definitions: 1
+number of process definitions: 2
+number of process definitions: 3
+number of process definitions: 4
+A new instance (id : 20) of Freight_Shift_Scenario:1:19 has been created.
+A new instance (id : 24) of prototypeProcessModel:1:7 has been created.
+A new instance (id : 28) of prototypeProcessModel:1:7 has been created.
+A new instance (id : 32) of process_pool1:1:11 has been created.
+A new instance (id : 36) of process_pool1:1:11 has been created.
+A new instance (id : 40) of prototype:1:15 has been created.
+A new instance (id : 44) of prototype:1:15 has been created.
+jdbc:sqlite:C:\Users\GET\Dropbox\SHARE-Workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\GETController\WEB-INF\database\getService.db
+Connected to SQLite Database
+SQLite Database tables have been configured
+0 queries from global_case20@getservice-project.eu has been removed.
+0 queries from global_case24@getservice-project.eu has been removed.
+0 queries from global_case28@getservice-project.eu has been removed.
+0 queries from global_case32@getservice-project.eu has been removed.
+0 queries from global_case36@getservice-project.eu has been removed.
+0 queries from global_case40@getservice-project.eu has been removed.
+0 queries from global_case44@getservice-project.eu has been removed.
+3 queries from global_case_all@getservice-project.eu has been removed.
+Start Calling Event Engine for UnexpectedEvent ...
+Start Calling Event Engine for RoadTraffic ...
+Start Calling Event Engine for TransportDeadlineExpired ...
+Start Calling Event Engine for Flighttrace ...
+User sadf@sadf.nl has been successfully registered
+User sadf@sadf.nl has been registered.
+user sadf@sadf.nl has logged in to the system.

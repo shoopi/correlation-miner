@@ -1,0 +1,152 @@
+<div id="mainDiv" apply="main.java.nl.tue.ieis.is.correlation.controller.MainController" height="100%" width="100%"  >	
+	<vbox spacing="15px"  id="mainHbox" height="90%" width="90%" style="padding: 10px; margin-left: auto; margin-right: auto;">
+		<groupbox mold="3d" id="uploadGroupbox" hflex="1" vflex="1" contentStyle="overflow:auto" height="100%" >
+			<attribute name="onClick">
+				<![CDATA[arrow.setSclass("open-" + self.isOpen());]]>
+			</attribute>
+			<caption label="Upload Event Log (XES)"  height="16%" hflex="1" vflex="1" width="100%" sclass="customIcon">
+				<span id="arrow" class="open-true"/>
+			</caption>
+			<hbox spacing="20px">
+				<vbox>
+					<groupbox>
+						<caption label="With Case Identifier"/>
+						<vlayout>
+							<button upload="true,maxsize=-1" label="Upload Event Log with Case Identifier" id="uploadIDBtn"  image="/imgs/upload.gif"/>
+							<button label="Download Log without Case Identifier" id="downloadLogBtn"  image="/imgs/disk.png" disabled="true"/>
+						</vlayout>
+					</groupbox>
+					<groupbox >
+						<caption label="Without Case Identifier"/>
+						<button upload="true,maxsize=-1" label="Upload Event Log without Case Identifier" id="uploadNoIDBtn" image="/imgs/upload.gif"/>
+					</groupbox>
+				</vbox>
+				<groupbox height="98%">
+					<caption label="Sample Event Log"/>
+					<hbox align="center" pack="center">
+						<vbox spacing="15px">
+							<button Label="Download Sample Log" id="downloadSampleLogBtn"  image="/imgs/disk.png" disabled="true"/>
+							<button Label="Run Correlation Miner" id="runSampleLogBtn"  image="/imgs/icon_run.png" disabled="true"/>							
+						</vbox>
+						<vbox spacing="10px">
+							<radiogroup id="sampleLogRadio" />
+							<hbox spacing="10px" align="center" pack="center">
+								<radio id="r1" label="3Branch Uniform (0-100]	2000Cases" 						radiogroup="sampleLogRadio" value="2" style="font-size: 0.85em;"/>
+								<radio id="r2" label="4Branch Uniform (0-100] Same Inter-Arrival 1000Cases" 	radiogroup="sampleLogRadio" value="8" style="font-size: 0.85em;"/>							
+								<radio id="r3" label="4Branch Uniform (0-100] Higher Inter-Arrival 1000Cases" 	radiogroup="sampleLogRadio" value="7" style="font-size: 0.85em;"/>	
+								<radio id="r4" label="Paper Example" 											radiogroup="sampleLogRadio" value="6" style="font-size: 0.90em;"/>						
+							</hbox>
+							<hbox  spacing="10px" align="center" pack="center">
+								<radio id="r5" label="3Branch Expo   (0-100] 2000Cases" 						radiogroup="sampleLogRadio" value="1" style="font-size: 0.85em;"/>
+								<radio id="r6" label="4Branch Expo   (0-100] Same Inter-Arrival 1000Cases" 		radiogroup="sampleLogRadio" value="5" style="font-size: 0.85em;"/>	
+								<radio id="r7" label="4Branch Expo   (0-100] Higher Inter-Arrival 1000Cases" 	radiogroup="sampleLogRadio" value="4" style="font-size: 0.85em;"/>													
+								<radio id="r8" label="BPI Challenage 2012 [modified]" 							radiogroup="sampleLogRadio" value="3" style="font-size: 0.85em;"/>
+							</hbox>
+						</vbox>
+					</hbox>
+				</groupbox>
+			</hbox>
+		</groupbox>
+		<hbox spacing="15px"  id="mainVbox" vflex="3.5" hflex="1">
+			<groupbox mold="3d" contentStyle="overflow:auto" hflex="1" vflex="1">
+				<attribute name="onClick">
+					<![CDATA[arrow2.setSclass("open-" + self.isOpen());]]>
+				</attribute>
+				<caption label="Correlation Miner Proces Model" width="100%" sclass="customIcon">
+					<span id="arrow2" class="open-true"/>
+				</caption>
+				<hbox width="100%" height="100%" style="overflow: scroll; margin-left: auto; margin-right: auto;">
+					<!--  <groupbox mold="3d" contentStyle="overflow:auto" hflex="1" vflex="1">
+						<attribute name="onClick">
+							<![CDATA[arrow6.setSclass("open-" + self.isOpen());]]>
+						</attribute>
+						<caption label="Process Model Image" width="100%" sclass="customIcon">
+							<span id="arrow6" class="open-true"/>
+						</caption>
+						<hbox width="100%" height="100%" style="overflow: scroll;">
+					-->
+							<image class="processImageStyle" id="correlationImgage" tooltiptext="Generated Process Model" />
+					<!--  
+						</hbox>
+					</groupbox>
+					<groupbox mold="3d" contentStyle="overflow:auto" hflex="1" vflex="1">
+						<attribute name="onClick">
+							<![CDATA[arrow7.setSclass("open-" + self.isOpen());]]>
+						</attribute>
+						<caption label="Process Model Applet" width="100%" sclass="customIcon">
+							<span id="arrow7" class="open-true"/>
+						</caption>
+						<hbox width="100%" height="100%" style="overflow: scroll;">
+							<applet  height="100%" width="100%" id="processApplet"></applet>
+						</hbox>
+					</groupbox>
+					-->
+				</hbox>
+			</groupbox>
+			<groupbox mold="3d" contentStyle="overflow:auto" hflex="1" vflex="1">
+				<attribute name="onClick">
+					<![CDATA[arrow3.setSclass("open-" + self.isOpen());]]>
+				</attribute>
+				<caption label="Log with ID Specification" width="100%" sclass="customIcon">
+					<span id="arrow3" class="open-true" />
+				</caption>
+				<hbox width="100%" height="100%" style="overflow: scroll;">
+					<vbox spacing="15px"  id="specificationVbox" vflex="1" hflex="1">
+						<groupbox mold="3d" contentStyle="overflow:auto" hflex="1" vflex="min" width="90%">
+							<attribute name="onClick">
+								<![CDATA[arrow5.setSclass("open-" + self.isOpen());]]>
+							</attribute>
+							<caption label="Properties" width="100%" sclass="customIcon">
+								<span id="arrow5" class="open-true" />
+							</caption>
+							<vbox width="100%" height="100%" style="overflow: scroll;">
+								<radiogroup id="timeRadio" />
+								<grid id="propertyGrid">
+									<columns>
+										<column hflex="1"/>
+										<column hflex="3"/>
+									</columns>
+									<rows>
+										<row>
+											<label value="P/S Threshold"/>
+											<slider id="psThreshold" mold="scale" maxpos="100"/>
+										</row>
+										<row>
+											<label value="Source Activity"/>
+											<textbox id="sourceActivityTxtBox" disabled="true"/>
+										</row>
+										<row>
+											<label value="Sink Activity" />
+											<textbox id="sinkActivityTxtBox" disabled="true"/>
+										</row>
+										<row>
+											<label value="Time Mapping" />
+											<hlayout>
+												<radio id="ra1" label="Average Time" radiogroup="timeRadio" value="false" selected="true"/>
+												<separator orient="vertical" />
+               									<radio id="ra2" label="Standard Deviation" radiogroup="timeRadio" value="true"/>		
+											</hlayout>
+										</row>
+									</rows>
+								</grid>
+							</vbox>
+						</groupbox>
+						<groupbox mold="3d" contentStyle="overflow:auto" hflex="1" vflex="2">
+							<attribute name="onClick">
+								<![CDATA[arrow4.setSclass("open-" + self.isOpen());]]>
+							</attribute>
+							<caption label="Console Log" width="100%" sclass="customIcon">
+								<span id="arrow4" class="open-true" />
+							</caption>
+							<vbox width="100%" height="100%" sclass="cmdClass">
+								<vlayout id="cmdLogLayout">
+								</vlayout>
+								<div class="cursor"/>
+							</vbox>
+						</groupbox>
+					</vbox>
+				</hbox>
+			</groupbox>
+		</hbox>
+	</vbox>
+</div>

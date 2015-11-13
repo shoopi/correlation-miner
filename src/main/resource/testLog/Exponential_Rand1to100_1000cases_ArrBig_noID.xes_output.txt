@@ -1,0 +1,365 @@
+===***=== Time mapping is set to **EQUAL_SIZE** method. ===***=== 
+# of events in the log: 6845
+**** Threshold is manually set to 1.0 of all values.
+Before P/S threshold we had 132 elements.
+After P/S threshold we have 132 elements. [Removed: 0]
+
+=================== Duration Matrix ===================
+
+
+ FINAL SELECTED EDGE LIST:
+Edge (Other OR EF --> EVENT 16 END) 		** Duration: PT0S 		** P/S Fraction: 0.4995 		** Edge-Ratio: 0.0
+Edge (EVENT 16 END --> Other OR EF) 		** Duration: PT0S 		** P/S Fraction: 0.4995 		** Edge-Ratio: 0.0
+Edge (A OR B --> {A OR B} OR CD) 		** Duration: PT477.278S 		** P/S Fraction: 0.48648713923439196 		** Edge-Ratio: 981070.128084198
+Edge (C --> D) 		** Duration: PT605.645S 		** P/S Fraction: 0.5018528069827415 		** Edge-Ratio: 1206817.9983714386
+Edge (Other OR EF --> {A OR B} OR CD) 		** Duration: PT652.539S 		** P/S Fraction: 0.4942355029585799 		** Edge-Ratio: 1320299.7277487915
+Edge (EVENT 16 END --> {A OR B} OR CD) 		** Duration: PT652.539S 		** P/S Fraction: 0.4942355029585799 		** Edge-Ratio: 1320299.7277487915
+Edge (EVENT 1 START --> Start) 		** Duration: PT684.254S 		** P/S Fraction: 0.500948 		** Edge-Ratio: 1365918.2190566687
+Edge ({A OR B} OR CD --> Other OR EF) 		** Duration: PT730.844S 		** P/S Fraction: 0.5057644970414201 		** Edge-Ratio: 1445028.2775387194
+Edge ({A OR B} OR CD --> EVENT 16 END) 		** Duration: PT730.844S 		** P/S Fraction: 0.5057644970414201 		** Edge-Ratio: 1445028.2775387194
+Edge ({A OR B} OR CD --> Start) 		** Duration: PT799.397S 		** P/S Fraction: 0.5028958579881657 		** Edge-Ratio: 1589587.5603310529
+Edge (D --> {A OR B} OR CD) 		** Duration: PT830.426S 		** P/S Fraction: 0.5211000916743062 		** Edge-Ratio: 1593601.7154244261
+Edge (C --> Other OR EF) 		** Duration: PT853.458S 		** P/S Fraction: 0.5267661971830986 		** Edge-Ratio: 1620183.687874996
+Edge (C --> EVENT 16 END) 		** Duration: PT853.458S 		** P/S Fraction: 0.5267661971830986 		** Edge-Ratio: 1620183.687874996
+Edge (C --> {A OR B} OR CD) 		** Duration: PT847.442S 		** P/S Fraction: 0.5215601300108342 		** Edge-Ratio: 1624821.2837557124
+Edge ({A OR B} OR CD --> EVENT 1 START) 		** Duration: PT872.814S 		** P/S Fraction: 0.5025573964497041 		** Edge-Ratio: 1736744.909468965
+Edge (D --> Other OR EF) 		** Duration: PT1006.363S 		** P/S Fraction: 0.5262478873239437 		** Edge-Ratio: 1912336.4183322806
+Edge (D --> EVENT 16 END) 		** Duration: PT1006.363S 		** P/S Fraction: 0.5262478873239437 		** Edge-Ratio: 1912336.4183322806
+Edge (Start --> {A OR B} OR CD) 		** Duration: PT951.775S 		** P/S Fraction: 0.49710414201183434 		** Edge-Ratio: 1914639.045549014
+Edge (A OR B --> Start) 		** Duration: PT1049.470S 		** P/S Fraction: 0.4887612244897959 		** Edge-Ratio: 2147203.884873462
+Edge (D --> EVENT 1 START) 		** Duration: PT1166.839S 		** P/S Fraction: 0.5232253521126761 		** Edge-Ratio: 2230088.804543864
+Edge (A --> {A OR B} OR CD) 		** Duration: PT1102.585S 		** P/S Fraction: 0.4916776056707797 		** Edge-Ratio: 2242495.8698205897
+Edge (EVENT 1 START --> A OR B) 		** Duration: PT1171.396S 		** P/S Fraction: 0.5118326530612245 		** Edge-Ratio: 2288630.85032576
+Edge (Start --> A OR B) 		** Duration: PT1172.787S 		** P/S Fraction: 0.5112387755102041 		** Edge-Ratio: 2294010.2671781625
+Edge (EVENT 1 START --> {A OR B} OR CD) 		** Duration: PT1151.667S 		** P/S Fraction: 0.49744260355029585 		** Edge-Ratio: 2315175.6439445307
+Edge (A OR B --> Other OR EF) 		** Duration: PT1170.143S 		** P/S Fraction: 0.4917938775510204 		** Edge-Ratio: 2379336.2492167368
+Edge (A OR B --> EVENT 16 END) 		** Duration: PT1170.143S 		** P/S Fraction: 0.4917938775510204 		** Edge-Ratio: 2379336.2492167368
+Edge (C --> EVENT 1 START) 		** Duration: PT1374.934S 		** P/S Fraction: 0.5236732394366197 		** Edge-Ratio: 2625557.1155004734
+Edge (D --> Start) 		** Duration: PT1382.837S 		** P/S Fraction: 0.5236732394366197 		** Edge-Ratio: 2640648.5874429815
+Edge (C --> Start) 		** Duration: PT1391.958S 		** P/S Fraction: 0.5239859154929577 		** Edge-Ratio: 2656479.800016128
+Edge (A --> Start) 		** Duration: PT1387.518S 		** P/S Fraction: 0.4939692832764505 		** Edge-Ratio: 2808915.54794
+Edge (Start --> D) 		** Duration: PT1369.385S 		** P/S Fraction: 0.4763267605633803 		** Edge-Ratio: 2874885.7158064055
+Edge (A OR B --> A) 		** Duration: PT1425.060S 		** P/S Fraction: 0.49435815281744094 		** Edge-Ratio: 2882646.906657274
+Edge ({A OR B} OR CD --> A OR B) 		** Duration: PT1495.907S 		** P/S Fraction: 0.513512860765608 		** Edge-Ratio: 2913085.7555733235
+Edge (Other OR EF --> A OR B) 		** Duration: PT1505.791S 		** P/S Fraction: 0.5082061224489796 		** Edge-Ratio: 2962953.285064312
+Edge (EVENT 16 END --> A OR B) 		** Duration: PT1505.791S 		** P/S Fraction: 0.5082061224489796 		** Edge-Ratio: 2962953.285064312
+Edge (E --> F) 		** Duration: PT1583.877S 		** P/S Fraction: 0.5036836628511967 		** Edge-Ratio: 3144586.8048095196
+Edge (EVENT 1 START --> A) 		** Duration: PT1596.778S 		** P/S Fraction: 0.5067610921501706 		** Edge-Ratio: 3150948.2964150296
+Edge (A OR B --> EVENT 1 START) 		** Duration: PT1548.721S 		** P/S Fraction: 0.4881673469387755 		** Edge-Ratio: 3172520.672904073
+Edge (Other OR EF --> D) 		** Duration: PT1532.574S 		** P/S Fraction: 0.4737521126760563 		** Edge-Ratio: 3234970.2703024107
+Edge (EVENT 16 END --> D) 		** Duration: PT1532.574S 		** P/S Fraction: 0.4737521126760563 		** Edge-Ratio: 3234970.2703024107
+Edge (Start --> A) 		** Duration: PT1668.922S 		** P/S Fraction: 0.5060307167235495 		** Edge-Ratio: 3298064.613164089
+Edge (B --> A OR B) 		** Duration: PT1735.605S 		** P/S Fraction: 0.4952242826064436 		** Edge-Ratio: 3504684.768011045
+Edge (A --> A OR B) 		** Duration: PT1802.764S 		** P/S Fraction: 0.505641847182559 		** Edge-Ratio: 3565298.2640677732
+Edge (EVENT 1 START --> D) 		** Duration: PT1700.959S 		** P/S Fraction: 0.47677464788732393 		** Edge-Ratio: 3567637.2633009367
+Edge (EVENT 1 START --> C) 		** Duration: PT1704.818S 		** P/S Fraction: 0.4763267605633803 		** Edge-Ratio: 3579093.473529829
+Edge (Start --> C) 		** Duration: PT1776.148S 		** P/S Fraction: 0.47601408450704225 		** Edge-Ratio: 3731292.9549960056
+Edge (A --> EVENT 1 START) 		** Duration: PT1879.786S 		** P/S Fraction: 0.4932389078498294 		** Edge-Ratio: 3811106.484268504
+Edge (Other OR EF --> B) 		** Duration: PT2005.532S 		** P/S Fraction: 0.5143756345177665 		** Edge-Ratio: 3898963.8416294954
+Edge (EVENT 16 END --> B) 		** Duration: PT2005.532S 		** P/S Fraction: 0.5143756345177665 		** Edge-Ratio: 3898963.8416294954
+Edge (C --> A OR B) 		** Duration: PT2125.748S 		** P/S Fraction: 0.5350445530324806 		** Edge-Ratio: 3973029.886860569
+Edge ({A OR B} OR CD --> A) 		** Duration: PT2019.675S 		** P/S Fraction: 0.5083223943292202 		** Edge-Ratio: 3973216.648590022
+Edge (D --> A OR B) 		** Duration: PT2144.656S 		** P/S Fraction: 0.5345903995400977 		** Edge-Ratio: 4011774.2515485208
+Edge ({A OR B} OR CD --> D) 		** Duration: PT1923.752S 		** P/S Fraction: 0.4788999083256938 		** Edge-Ratio: 4017023.1118350527
+Edge (B --> Start) 		** Duration: PT2045.108S 		** P/S Fraction: 0.48269035532994925 		** Edge-Ratio: 4236894.2685876535
+Edge (A OR B --> D) 		** Duration: PT1977.552S 		** P/S Fraction: 0.46540960045990226 		** Edge-Ratio: 4249057.170384644
+Edge (B --> {A OR B} OR CD) 		** Duration: PT2056.021S 		** P/S Fraction: 0.4801309584597363 		** Edge-Ratio: 4282208.767782296
+Edge (A --> Other OR EF) 		** Duration: PT2134.690S 		** P/S Fraction: 0.4967815699658703 		** Edge-Ratio: 4297039.441593328
+Edge (A --> EVENT 16 END) 		** Duration: PT2134.690S 		** P/S Fraction: 0.4967815699658703 		** Edge-Ratio: 4297039.441593328
+Edge (EVENT 1 START --> B) 		** Duration: PT2269.230S 		** P/S Fraction: 0.5178984771573604 		** Edge-Ratio: 4381611.648011291
+Edge (Other OR EF --> A) 		** Duration: PT2275.844S 		** P/S Fraction: 0.5032184300341297 		** Edge-Ratio: 4522576.805952131
+Edge (EVENT 16 END --> A) 		** Duration: PT2275.844S 		** P/S Fraction: 0.5032184300341297 		** Edge-Ratio: 4522576.805952131
+Edge (A OR B --> C) 		** Duration: PT2116.909S 		** P/S Fraction: 0.4649554469675194 		** Edge-Ratio: 4552928.702753496
+Edge (D --> A) 		** Duration: PT2408.207S 		** P/S Fraction: 0.5289333269240013 		** Edge-Ratio: 4552950.017358271
+Edge (F --> Start) 		** Duration: PT2222.516S 		** P/S Fraction: 0.47193548387096773 		** Edge-Ratio: 4709364.046479836
+Edge (Start --> B) 		** Duration: PT2443.434S 		** P/S Fraction: 0.5173096446700508 		** Edge-Ratio: 4723349.013835737
+Edge (Other OR EF --> E) 		** Duration: PT2508.463S 		** P/S Fraction: 0.5246709677419354 		** Edge-Ratio: 4781021.162264522
+Edge (EVENT 16 END --> E) 		** Duration: PT2508.463S 		** P/S Fraction: 0.5246709677419354 		** Edge-Ratio: 4781021.162264522
+Edge (C --> A) 		** Duration: PT2573.923S 		** P/S Fraction: 0.5293755708311301 		** Edge-Ratio: 4862186.964840274
+Edge ({A OR B} OR CD --> C) 		** Duration: PT2344.569S 		** P/S Fraction: 0.47843986998916577 		** Edge-Ratio: 4900446.528532608
+Edge ({A OR B} OR CD --> B) 		** Duration: PT2572.937S 		** P/S Fraction: 0.5198690415402637 		** Edge-Ratio: 4949202.192107696
+Edge (Other OR EF --> C) 		** Duration: PT2390.371S 		** P/S Fraction: 0.4732338028169014 		** Edge-Ratio: 5051141.710020358
+Edge (EVENT 16 END --> C) 		** Duration: PT2390.371S 		** P/S Fraction: 0.4732338028169014 		** Edge-Ratio: 5051141.710020358
+Edge (B --> Other OR EF) 		** Duration: PT2584.702S 		** P/S Fraction: 0.4856243654822335 		** Edge-Ratio: 5322430.6351131
+Edge (B --> EVENT 16 END) 		** Duration: PT2584.702S 		** P/S Fraction: 0.4856243654822335 		** Edge-Ratio: 5322430.6351131
+Edge (F --> EVENT 1 START) 		** Duration: PT2586.090S 		** P/S Fraction: 0.4714967741935484 		** Edge-Ratio: 5484851.947127883
+Edge (A OR B --> F) 		** Duration: PT2915.515S 		** P/S Fraction: 0.5171823568136932 		** Edge-Ratio: 5637305.607179226
+Edge (B --> EVENT 1 START) 		** Duration: PT2754.422S 		** P/S Fraction: 0.4821015228426396 		** Edge-Ratio: 5713365.068334492
+Edge (D --> B) 		** Duration: PT3120.058S 		** P/S Fraction: 0.5419603917923786 		** Edge-Ratio: 5756985.283890032
+Edge (EVENT 1 START --> E) 		** Duration: PT3182.168S 		** P/S Fraction: 0.5280645161290323 		** Edge-Ratio: 6026097.006719609
+Edge (EVENT 1 START --> F) 		** Duration: PT3225.580S 		** P/S Fraction: 0.5285032258064516 		** Edge-Ratio: 6103236.16299226
+Edge (A OR B --> B) 		** Duration: PT3136.594S 		** P/S Fraction: 0.5047757173935564 		** Edge-Ratio: 6213836.94167385
+Edge (C --> B) 		** Duration: PT3408.664S 		** P/S Fraction: 0.5423464645742475 		** Edge-Ratio: 6285030.368319755
+Edge (F --> {A OR B} OR CD) 		** Duration: PT2952.529S 		** P/S Fraction: 0.468906279824394 		** Edge-Ratio: 6296629.25628918
+Edge (A OR B --> E) 		** Duration: PT3267.350S 		** P/S Fraction: 0.516695194206715 		** Edge-Ratio: 6323554.07333792
+Edge (A --> C) 		** Duration: PT3009.706S 		** P/S Fraction: 0.4706244291688699 		** Edge-Ratio: 6395133.3876041835
+Edge (Start --> Other OR EF) 		** Duration: PT3258.340S 		** P/S Fraction: 0.502257 		** Edge-Ratio: 6487395.894930285
+Edge (Start --> EVENT 16 END) 		** Duration: PT3258.340S 		** P/S Fraction: 0.502257 		** Edge-Ratio: 6487395.894930285
+Edge (E --> EVENT 1 START) 		** Duration: PT3069.915S 		** P/S Fraction: 0.47193548387096773 		** Edge-Ratio: 6504946.343130554
+Edge (C --> E) 		** Duration: PT3624.312S 		** P/S Fraction: 0.5514584279872785 		** Edge-Ratio: 6572230.681518587
+Edge (D --> E) 		** Duration: PT3651.600S 		** P/S Fraction: 0.5509677419354839 		** Edge-Ratio: 6627611.241217798
+Edge (Start --> F) 		** Duration: PT3530.189S 		** P/S Fraction: 0.5280645161290323 		** Edge-Ratio: 6685147.159437996
+Edge (E --> Other OR EF) 		** Duration: PT3234.638S 		** P/S Fraction: 0.4753290322580645 		** Edge-Ratio: 6805050.355611054
+Edge (E --> EVENT 16 END) 		** Duration: PT3234.638S 		** P/S Fraction: 0.4753290322580645 		** Edge-Ratio: 6805050.355611054
+Edge (F --> Other OR EF) 		** Duration: PT3244.010S 		** P/S Fraction: 0.47478709677419356 		** Edge-Ratio: 6832557.207305142
+Edge (F --> EVENT 16 END) 		** Duration: PT3244.010S 		** P/S Fraction: 0.47478709677419356 		** Edge-Ratio: 6832557.207305142
+Edge (A --> E) 		** Duration: PT3563.339S 		** P/S Fraction: 0.5211273808213145 		** Edge-Ratio: 6837750.483162209
+Edge (E --> Start) 		** Duration: PT3359.416S 		** P/S Fraction: 0.4723483870967742 		** Edge-Ratio: 7112157.237686781
+Edge (Start --> E) 		** Duration: PT3862.335S 		** P/S Fraction: 0.5276516129032258 		** Edge-Ratio: 7319858.22756951
+Edge (D --> F) 		** Duration: PT4061.308S 		** P/S Fraction: 0.5514584279872785 		** Edge-Ratio: 7364667.568547324
+Edge (A --> D) 		** Duration: PT3568.020S 		** P/S Fraction: 0.47106667307599864 		** Edge-Ratio: 7574341.815992489
+Edge (Other OR EF --> F) 		** Duration: PT4002.308S 		** P/S Fraction: 0.5252129032258065 		** Edge-Ratio: 7620353.527908805
+Edge (EVENT 16 END --> F) 		** Duration: PT4002.308S 		** P/S Fraction: 0.5252129032258065 		** Edge-Ratio: 7620353.527908805
+Edge ({A OR B} OR CD --> F) 		** Duration: PT4110.629S 		** P/S Fraction: 0.5310937201756061 		** Edge-Ratio: 7739931.473188614
+Edge (E --> {A OR B} OR CD) 		** Duration: PT3655.815S 		** P/S Fraction: 0.4694865432334415 		** Edge-Ratio: 7786836.604137191
+Edge (EVENT 1 START --> Other OR EF) 		** Duration: PT3942.594S 		** P/S Fraction: 0.502697 		** Edge-Ratio: 7842883.48647396
+Edge (EVENT 1 START --> EVENT 16 END) 		** Duration: PT3942.594S 		** P/S Fraction: 0.502697 		** Edge-Ratio: 7842883.48647396
+Edge (B --> E) 		** Duration: PT4081.312S 		** P/S Fraction: 0.5113148845587031 		** Edge-Ratio: 7981993.333760329
+Edge (F --> B) 		** Duration: PT4160.818S 		** P/S Fraction: 0.48799738005567384 		** Edge-Ratio: 8526312.168981947
+Edge (B --> D) 		** Duration: PT3921.990S 		** P/S Fraction: 0.45803960820762135 		** Edge-Ratio: 8562556.44647707
+Edge (C --> F) 		** Duration: PT4733.264S 		** P/S Fraction: 0.5518037255792821 		** Edge-Ratio: 8577803.629417382
+Edge ({A OR B} OR CD --> E) 		** Duration: PT4551.521S 		** P/S Fraction: 0.5305134567665585 		** Edge-Ratio: 8579463.804257095
+Edge (E --> A OR B) 		** Duration: PT4560.224S 		** P/S Fraction: 0.48330480579328505 		** Edge-Ratio: 9435503.113847496
+Edge (A --> F) 		** Duration: PT4983.966S 		** P/S Fraction: 0.5215897831113069 		** Edge-Ratio: 9555336.705927052
+Edge (F --> A OR B) 		** Duration: PT4941.781S 		** P/S Fraction: 0.48281764318630677 		** Edge-Ratio: 1.0235294980910826E7
+Edge (B --> A) 		** Duration: PT5080.680S 		** P/S Fraction: 0.4894405848824518 		** Edge-Ratio: 1.0380585829882128E7
+Edge (B --> F) 		** Duration: PT5505.018S 		** P/S Fraction: 0.5120026199443262 		** Edge-Ratio: 1.075193326276065E7
+Edge (B --> C) 		** Duration: PT4980.245S 		** P/S Fraction: 0.4576535354257525 		** Edge-Ratio: 1.0882129415578328E7
+Edge (E --> B) 		** Duration: PT5545.936S 		** P/S Fraction: 0.4886851154412969 		** Edge-Ratio: 1.134869023991422E7
+Edge (F --> C) 		** Duration: PT5270.560S 		** P/S Fraction: 0.44819627442071786 		** Edge-Ratio: 1.175949087665234E7
+Edge (A --> B) 		** Duration: PT6182.121S 		** P/S Fraction: 0.5105594151175482 		** Edge-Ratio: 1.2108524134407872E7
+Edge (F --> A) 		** Duration: PT5814.805S 		** P/S Fraction: 0.4784102168886932 		** Edge-Ratio: 1.215443315114834E7
+Edge (E --> A) 		** Duration: PT5847.077S 		** P/S Fraction: 0.47887261917868545 		** Edge-Ratio: 1.221008837387346E7
+Edge (E --> C) 		** Duration: PT6213.891S 		** P/S Fraction: 0.4485415720127215 		** Edge-Ratio: 1.3853545329403184E7
+Edge (F --> D) 		** Duration: PT6516.901S 		** P/S Fraction: 0.4485415720127215 		** Edge-Ratio: 1.4529090293140473E7
+Edge (E --> D) 		** Duration: PT7653.491S 		** P/S Fraction: 0.44903225806451613 		** Edge-Ratio: 1.704441242816092E7
+======================================
+
+
+=================== Starting ILP ===================
+Optimal objective: 3.755422687579875E7
+SOLUTION 0
+1. Other OR EF --> EVENT 16 END: (803)
+2. A OR B --> {A OR B} OR CD: (197)
+3. C --> D: (355)
+4. EVENT 1 START --> Start: (845)
+5. {A OR B} OR CD --> Other OR EF: (648)
+6. {A OR B} OR CD --> EVENT 16 END: (197)
+7. D --> {A OR B} OR CD: (3)
+8. D --> Other OR EF: (352)
+9. Start --> {A OR B} OR CD: (352)
+10. A --> {A OR B} OR CD: (293)
+11. Start --> A OR B: (293)
+12. A OR B --> A: (293)
+13. E --> F: (155)
+14. B --> A OR B: (197)
+15. Start --> C: (355)
+16. Other OR EF --> B: (42)
+17. EVENT 1 START --> B: (155)
+18. F --> Start: (155)
+19. Other OR EF --> E: (155)
+Objective Value: 3.755422687579875E7
+======================================
+
+*******************===Finding Cycles====*******************
+# of edges in the graph: 19
+Start --> C (3731292.9549960056)
+C --> D (1206817.9983714386)
+D --> {A OR B} OR CD (1593601.7154244261)
+{A OR B} OR CD --> Other OR EF (1445028.2775387194)
+Other OR EF --> E (4781021.162264522)
+E --> F (3144586.8048095196)
+F --> Start (4709364.046479836)
+F --> Start (4709364.046479836)
+
+Start --> C (3731292.9549960056)
+C --> D (1206817.9983714386)
+D --> Other OR EF (1912336.4183322806)
+Other OR EF --> E (4781021.162264522)
+E --> F (3144586.8048095196)
+F --> Start (4709364.046479836)
+F --> Start (4709364.046479836)
+
+Start --> {A OR B} OR CD (1914639.045549014)
+{A OR B} OR CD --> Other OR EF (1445028.2775387194)
+Other OR EF --> E (4781021.162264522)
+E --> F (3144586.8048095196)
+F --> Start (4709364.046479836)
+F --> Start (4709364.046479836)
+
+Start --> A OR B (2294010.2671781625)
+A OR B --> A (2882646.906657274)
+A --> {A OR B} OR CD (2242495.8698205897)
+{A OR B} OR CD --> Other OR EF (1445028.2775387194)
+Other OR EF --> E (4781021.162264522)
+E --> F (3144586.8048095196)
+F --> Start (4709364.046479836)
+F --> Start (4709364.046479836)
+
+Start --> A OR B (2294010.2671781625)
+A OR B --> {A OR B} OR CD (981070.128084198)
+{A OR B} OR CD --> Other OR EF (1445028.2775387194)
+Other OR EF --> E (4781021.162264522)
+E --> F (3144586.8048095196)
+F --> Start (4709364.046479836)
+F --> Start (4709364.046479836)
+
+{A OR B} OR CD --> Other OR EF (1445028.2775387194)
+Other OR EF --> B (3898963.8416294954)
+B --> A OR B (3504684.768011045)
+A OR B --> A (2882646.906657274)
+A --> {A OR B} OR CD (2242495.8698205897)
+A --> {A OR B} OR CD (2242495.8698205897)
+
+{A OR B} OR CD --> Other OR EF (1445028.2775387194)
+Other OR EF --> B (3898963.8416294954)
+B --> A OR B (3504684.768011045)
+A OR B --> {A OR B} OR CD (981070.128084198)
+A OR B --> {A OR B} OR CD (981070.128084198)
+
+======================================
+# of loop: 7 = # of edges to be removed: 7
+[REMOVED] Other OR EF --> E
+[REMOVED] Other OR EF --> E
+[REMOVED] Other OR EF --> E
+[REMOVED] Other OR EF --> E
+[REMOVED] Other OR EF --> E
+[REMOVED] Other OR EF --> B
+[REMOVED] Other OR EF --> B
+# of possible edges [BEFORE] loop removal: 125
+# of possible edges [AFTER] loop removal: 123
+
+Optimal objective: 3.82758727257547E7
+SOLUTION 0
+1. Other OR EF --> EVENT 16 END: (1000)
+2. A OR B --> {A OR B} OR CD: (197)
+3. C --> D: (355)
+4. EVENT 1 START --> Start: (845)
+5. {A OR B} OR CD --> Other OR EF: (845)
+6. D --> {A OR B} OR CD: (200)
+7. D --> Other OR EF: (155)
+8. Start --> {A OR B} OR CD: (155)
+9. A --> {A OR B} OR CD: (293)
+10. Start --> A OR B: (448)
+11. A OR B --> A: (293)
+12. E --> F: (155)
+13. B --> A OR B: (42)
+14. Start --> C: (355)
+15. EVENT 1 START --> B: (155)
+16. F --> Start: (155)
+17. Start --> B: (42)
+18. B --> E: (155)
+Objective Value: 3.82758727257547E7
+======================================
+Start --> B (4723349.013835737)
+B --> E (7981993.333760329)
+E --> F (3144586.8048095196)
+F --> Start (4709364.046479836)
+F --> Start (4709364.046479836)
+
+======================================
+# of loop: 1 = # of edges to be removed: 1
+[REMOVED] B --> E
+# of possible edges [BEFORE] loop removal: 123
+# of possible edges [AFTER] loop removal: 122
+
+Optimal objective: 3.8328369360659234E7
+SOLUTION 0
+1. Other OR EF --> EVENT 16 END: (1000)
+2. A OR B --> {A OR B} OR CD: (197)
+3. C --> D: (355)
+4. EVENT 1 START --> Start: (845)
+5. {A OR B} OR CD --> Other OR EF: (845)
+6. D --> {A OR B} OR CD: (200)
+7. D --> Other OR EF: (155)
+8. Start --> {A OR B} OR CD: (310)
+9. A --> {A OR B} OR CD: (138)
+10. Start --> A OR B: (293)
+11. A OR B --> A: (293)
+12. E --> F: (155)
+13. B --> A OR B: (197)
+14. Start --> C: (355)
+15. EVENT 1 START --> B: (155)
+16. F --> Start: (155)
+17. Start --> B: (42)
+18. A --> E: (155)
+Objective Value: 3.8328369360659234E7
+======================================
+Start --> A OR B (2294010.2671781625)
+A OR B --> A (2882646.906657274)
+A --> E (6837750.483162209)
+E --> F (3144586.8048095196)
+F --> Start (4709364.046479836)
+F --> Start (4709364.046479836)
+
+Start --> B (4723349.013835737)
+B --> A OR B (3504684.768011045)
+A OR B --> A (2882646.906657274)
+A --> E (6837750.483162209)
+E --> F (3144586.8048095196)
+F --> Start (4709364.046479836)
+F --> Start (4709364.046479836)
+
+======================================
+# of loop: 2 = # of edges to be removed: 2
+[REMOVED] A --> E
+[REMOVED] A --> E
+# of possible edges [BEFORE] loop removal: 122
+# of possible edges [AFTER] loop removal: 121
+
+Optimal objective: 3.860873546247175E7
+SOLUTION 0
+1. Other OR EF --> EVENT 16 END: (1000)
+2. A OR B --> {A OR B} OR CD: (197)
+3. C --> D: (355)
+4. EVENT 1 START --> Start: (845)
+5. {A OR B} OR CD --> Other OR EF: (845)
+6. D --> {A OR B} OR CD: (45)
+7. D --> Other OR EF: (155)
+8. Start --> {A OR B} OR CD: (310)
+9. A --> {A OR B} OR CD: (293)
+10. Start --> A OR B: (293)
+11. A OR B --> A: (293)
+12. E --> F: (155)
+13. B --> A OR B: (197)
+14. Start --> C: (355)
+15. EVENT 1 START --> B: (155)
+16. F --> Start: (155)
+17. Start --> B: (42)
+18. D --> E: (155)
+Objective Value: 3.860873546247175E7
+======================================
+Start --> C (3731292.9549960056)
+C --> D (1206817.9983714386)
+D --> E (6627611.241217798)
+E --> F (3144586.8048095196)
+F --> Start (4709364.046479836)
+F --> Start (4709364.046479836)
+
+======================================
+# of loop: 1 = # of edges to be removed: 1
+[REMOVED] D --> E
+# of possible edges [BEFORE] loop removal: 121
+# of possible edges [AFTER] loop removal: 120
+
+Optimal objective: 3.862069283460459E7
+SOLUTION 0
+1. Other OR EF --> EVENT 16 END: (1000)
+2. A OR B --> {A OR B} OR CD: (197)
+3. C --> D: (355)
+4. EVENT 1 START --> Start: (845)
+5. {A OR B} OR CD --> Other OR EF: (845)
+6. D --> {A OR B} OR CD: (200)
+7. D --> Other OR EF: (155)
+8. Start --> {A OR B} OR CD: (155)
+9. A --> {A OR B} OR CD: (293)
+10. Start --> A OR B: (293)
+11. A OR B --> A: (293)
+12. E --> F: (155)
+13. B --> A OR B: (197)
+14. Start --> C: (355)
+15. F --> Start: (155)
+16. Start --> B: (197)
+17. EVENT 1 START --> E: (155)
+Objective Value: 3.862069283460459E7
+======================================

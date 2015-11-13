@@ -1,0 +1,129 @@
+===***=== Time mapping is set to **EQUAL_SIZE** method. ===***=== 
+# of events in the log: 14000
+**** Threshold is manually set to 1.0 of all values.
+Before P/S threshold we had 90 elements.
+After P/S threshold we have 90 elements. [Removed: 0]
+
+=================== Duration Matrix ===================
+
+
+ FINAL SELECTED EDGE LIST:
+Edge (EVENT 9 END --> H) 		** Duration: PT0S 		** P/S Fraction: 0.49975 		** Edge-Ratio: 0.0
+Edge (H --> EVENT 9 END) 		** Duration: PT0S 		** P/S Fraction: 0.49975 		** Edge-Ratio: 0.0
+Edge (G --> EVENT 9 END) 		** Duration: PT1506.238S 		** P/S Fraction: 0.6562432432432432 		** Edge-Ratio: 2295243.441373914
+Edge (G --> H) 		** Duration: PT1506.238S 		** P/S Fraction: 0.6562432432432432 		** Edge-Ratio: 2295243.441373914
+Edge (B --> G) 		** Duration: PT1845.377S 		** P/S Fraction: 0.7671043705169869 		** Edge-Ratio: 2405640.0548941153
+Edge (B --> E) 		** Duration: PT1595.828S 		** P/S Fraction: 0.6585822130299896 		** Edge-Ratio: 2423126.480531492
+Edge (C --> E) 		** Duration: PT1911.632S 		** P/S Fraction: 0.6595570054945055 		** Edge-Ratio: 2898357.5097754383
+Edge (B --> EVENT 9 END) 		** Duration: PT2889.743S 		** P/S Fraction: 0.8404555325749742 		** Edge-Ratio: 3438305.642591764
+Edge (B --> H) 		** Duration: PT2889.743S 		** P/S Fraction: 0.8404555325749742 		** Edge-Ratio: 3438305.642591764
+Edge (E --> C) 		** Duration: PT1170.598S 		** P/S Fraction: 0.3404429945054945 		** Edge-Ratio: 3438455.244762299
+Edge (C --> G) 		** Duration: PT2693.354S 		** P/S Fraction: 0.7678436428436428 		** Edge-Ratio: 3507685.4840204124
+Edge (C --> EVENT 9 END) 		** Duration: PT3029.429S 		** P/S Fraction: 0.8409361263736264 		** Edge-Ratio: 3602448.3964838376
+Edge (C --> H) 		** Duration: PT3029.429S 		** P/S Fraction: 0.8409361263736264 		** Edge-Ratio: 3602448.3964838376
+Edge (EVENT 9 END --> G) 		** Duration: PT1260.523S 		** P/S Fraction: 0.34375675675675677 		** Edge-Ratio: 3666903.9232644076
+Edge (H --> G) 		** Duration: PT1260.523S 		** P/S Fraction: 0.34375675675675677 		** Edge-Ratio: 3666903.9232644076
+Edge (E --> B) 		** Duration: PT1317.749S 		** P/S Fraction: 0.34141778697001035 		** Edge-Ratio: 3859637.8111833674
+Edge (B --> C) 		** Duration: PT2035.061S 		** P/S Fraction: 0.498536881939157 		** Edge-Ratio: 4082067.0921762716
+Edge (C --> B) 		** Duration: PT2469.676S 		** P/S Fraction: 0.501463118060843 		** Edge-Ratio: 4924940.461324918
+Edge (D --> E) 		** Duration: PT3831.390S 		** P/S Fraction: 0.648944262295082 		** Edge-Ratio: 5904035.558384867
+Edge (B --> D) 		** Duration: PT3246.382S 		** P/S Fraction: 0.5139742655161307 		** Edge-Ratio: 6316234.523415287
+Edge (F --> EVENT 9 END) 		** Duration: PT4207.916S 		** P/S Fraction: 0.6628239247311828 		** Edge-Ratio: 6348467.2821769025
+Edge (F --> H) 		** Duration: PT4207.916S 		** P/S Fraction: 0.6628239247311828 		** Edge-Ratio: 6348467.2821769025
+Edge (D --> G) 		** Duration: PT5302.867S 		** P/S Fraction: 0.7606617795142385 		** Edge-Ratio: 6971386.15717807
+Edge (G --> F) 		** Duration: PT3871.630S 		** P/S Fraction: 0.49033546009352463 		** Edge-Ratio: 7895880.096580289
+Edge (G --> B) 		** Duration: PT1844.658S 		** P/S Fraction: 0.23289562948301315 		** Edge-Ratio: 7920535.065835338
+Edge (D --> B) 		** Duration: PT4137.232S 		** P/S Fraction: 0.4860257344838693 		** Edge-Ratio: 8512372.301424526
+Edge (G --> C) 		** Duration: PT2070.847S 		** P/S Fraction: 0.23215635715635716 		** Edge-Ratio: 8920052.956401646
+Edge (D --> EVENT 9 END) 		** Duration: PT7715.971S 		** P/S Fraction: 0.8359770491803279 		** Edge-Ratio: 9229883.772007233
+Edge (D --> H) 		** Duration: PT7715.971S 		** P/S Fraction: 0.8359770491803279 		** Edge-Ratio: 9229883.772007233
+Edge (F --> G) 		** Duration: PT4713.685S 		** P/S Fraction: 0.5096645399064754 		** Edge-Ratio: 9248603.014180606
+Edge (E --> D) 		** Duration: PT3403.939S 		** P/S Fraction: 0.35105573770491805 		** Edge-Ratio: 9696292.167887028
+Edge (D --> C) 		** Duration: PT4753.638S 		** P/S Fraction: 0.48455683660601695 		** Edge-Ratio: 9810279.49847106
+Edge (C --> D) 		** Duration: PT5093.734S 		** P/S Fraction: 0.5154431633939831 		** Edge-Ratio: 9882241.848858442
+Edge (EVENT 9 END --> F) 		** Duration: PT3486.294S 		** P/S Fraction: 0.3371760752688172 		** Edge-Ratio: 1.0339683790495856E7
+Edge (H --> F) 		** Duration: PT3486.294S 		** P/S Fraction: 0.3371760752688172 		** Edge-Ratio: 1.0339683790495856E7
+Edge (G --> D) 		** Duration: PT3056.845S 		** P/S Fraction: 0.23933822048576148 		** Edge-Ratio: 1.2772072065196354E7
+Edge (EVENT 9 END --> C) 		** Duration: PT2049.616S 		** P/S Fraction: 0.15906387362637361 		** Edge-Ratio: 1.2885490295642864E7
+Edge (H --> C) 		** Duration: PT2049.616S 		** P/S Fraction: 0.15906387362637361 		** Edge-Ratio: 1.2885490295642864E7
+Edge (D --> F) 		** Duration: PT9999.104S 		** P/S Fraction: 0.7563634761149304 		** Edge-Ratio: 1.321997203164874E7
+Edge (EVENT 9 END --> B) 		** Duration: PT2109.290S 		** P/S Fraction: 0.15954446742502584 		** Edge-Ratio: 1.3220702880162304E7
+Edge (H --> B) 		** Duration: PT2109.290S 		** P/S Fraction: 0.15954446742502584 		** Edge-Ratio: 1.3220702880162304E7
+Edge (EVENT 9 END --> D) 		** Duration: PT3621.666S 		** P/S Fraction: 0.16402295081967214 		** Edge-Ratio: 2.208023927079377E7
+Edge (H --> D) 		** Duration: PT3621.666S 		** P/S Fraction: 0.16402295081967214 		** Edge-Ratio: 2.208023927079377E7
+Edge (F --> D) 		** Duration: PT7626.231S 		** P/S Fraction: 0.24363652388506962 		** Edge-Ratio: 3.130167381470897E7
+Edge (E --> F) 		** Duration: PT36738.431S 		** P/S Fraction: 0.6535954301075269 		** Edge-Ratio: 5.620974276695286E7
+Edge (E --> G) 		** Duration: PT38557.160S 		** P/S Fraction: 0.6583519656019656 		** Edge-Ratio: 5.85661804240915E7
+Edge (A --> C) 		** Duration: PT80893.720S 		** P/S Fraction: 0.6549608516483516 		** Edge-Ratio: 1.2350924455471398E8
+Edge (A --> D) 		** Duration: PT86400.230S 		** P/S Fraction: 0.6724180327868853 		** Edge-Ratio: 1.2849183958066678E8
+Edge (A --> B) 		** Duration: PT84671.223S 		** P/S Fraction: 0.6546385729058946 		** Edge-Ratio: 1.2934041241131026E8
+Edge (B --> F) 		** Duration: PT214343.702S 		** P/S Fraction: 0.7635798556671226 		** Edge-Ratio: 2.807089532406964E8
+Edge (C --> F) 		** Duration: PT215038.093S 		** P/S Fraction: 0.7638544251447478 		** Edge-Ratio: 2.815171136296697E8
+Edge (EVENT 1 START --> A) 		** Duration: PT239724.116S 		** P/S Fraction: 0.65746725 		** Edge-Ratio: 3.646175775295272E8
+Edge (EVENT 1 START --> B) 		** Duration: PT313708.458S 		** P/S Fraction: 0.764476215098242 		** Edge-Ratio: 4.103573817004701E8
+Edge (EVENT 1 START --> C) 		** Duration: PT316358.050S 		** P/S Fraction: 0.7620199175824176 		** Edge-Ratio: 4.1515719300838846E8
+Edge (EVENT 1 START --> D) 		** Duration: PT328343.343S 		** P/S Fraction: 0.7782459016393443 		** Edge-Ratio: 4.219017951888442E8
+Edge (A --> F) 		** Duration: PT518556.908S 		** P/S Fraction: 0.8377379032258064 		** Edge-Ratio: 6.189965930910333E8
+Edge (A --> G) 		** Duration: PT530100.411S 		** P/S Fraction: 0.8404523955773956 		** Edge-Ratio: 6.30732226821506E8
+Edge (A --> E) 		** Duration: PT646253.136S 		** P/S Fraction: 0.765682 		** Edge-Ratio: 8.440228920099989E8
+Edge (E --> EVENT 9 END) 		** Duration: PT656898.385S 		** P/S Fraction: 0.765682 		** Edge-Ratio: 8.579258556424208E8
+Edge (E --> H) 		** Duration: PT656898.385S 		** P/S Fraction: 0.765682 		** Edge-Ratio: 8.579258556424208E8
+Edge (EVENT 1 START --> F) 		** Duration: PT898640.540S 		** P/S Fraction: 0.8911384408602151 		** Edge-Ratio: 1.0084185563048353E9
+Edge (EVENT 1 START --> G) 		** Duration: PT913957.882S 		** P/S Fraction: 0.8904560810810811 		** Edge-Ratio: 1.0263929927800436E9
+Edge (EVENT 1 START --> E) 		** Duration: PT885977.252S 		** P/S Fraction: 0.8399475 		** Edge-Ratio: 1.0548007488563274E9
+Edge (A --> EVENT 9 END) 		** Duration: PT1303151.521S 		** P/S Fraction: 0.890583 		** Edge-Ratio: 1.4632566768060923E9
+Edge (A --> H) 		** Duration: PT1303151.521S 		** P/S Fraction: 0.890583 		** Edge-Ratio: 1.4632566768060923E9
+Edge (EVENT 1 START --> EVENT 9 END) 		** Duration: PT1542875.637S 		** P/S Fraction: 0.9252375 		** Edge-Ratio: 1.6675455080452316E9
+Edge (EVENT 1 START --> H) 		** Duration: PT1542875.637S 		** P/S Fraction: 0.9252375 		** Edge-Ratio: 1.6675455080452316E9
+======================================
+
+
+=================== Starting ILP ===================
+Optimal objective: 8.507749762584381E8
+SOLUTION 0
+1. H --> EVENT 9 END: (2000)
+2. G --> H: (1323)
+3. B --> E: (967)
+4. C --> E: (423)
+5. C --> H: (305)
+6. D --> E: (305)
+7. F --> H: (372)
+8. G --> F: (305)
+9. E --> D: (305)
+10. E --> F: (67)
+11. E --> G: (1628)
+12. A --> C: (728)
+13. A --> B: (967)
+14. EVENT 1 START --> A: (2000)
+15. A --> E: (305)
+Objective Value: 8.507749762584381E8
+======================================
+
+*******************===Finding Cycles====*******************
+# of edges in the graph: 15
+E --> D (9696292.167887028)
+D --> E (5904035.558384867)
+D --> E (5904035.558384867)
+
+======================================
+# of loop: 1 = # of edges to be removed: 1
+[REMOVED] E --> D
+# of possible edges [BEFORE] loop removal: 67
+# of possible edges [AFTER] loop removal: 66
+
+Optimal objective: 8.806042275395052E8
+SOLUTION 0
+1. H --> EVENT 9 END: (2000)
+2. G --> H: (1628)
+3. B --> E: (967)
+4. C --> E: (728)
+5. D --> E: (305)
+6. F --> H: (372)
+7. E --> F: (372)
+8. E --> G: (1628)
+9. A --> C: (728)
+10. A --> D: (305)
+11. A --> B: (967)
+12. EVENT 1 START --> A: (2000)
+Objective Value: 8.806042275395052E8
+======================================
