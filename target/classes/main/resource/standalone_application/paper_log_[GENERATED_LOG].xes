@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<log xmlns="http://www.xes-standard.org">
+    <trace>
+        <string key="concept:name" value="1"/>
+        <string key="creator" value="CorrelationMiner"/>
+        <event>
+            <string key="concept:name" value="A"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:00:20.450+01:00"/>
+            <string key="Activity" value="A"/>
+        </event>
+        <event>
+            <string key="concept:name" value="B"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:02:04.218+01:00"/>
+            <string key="Activity" value="B"/>
+        </event>
+        <event>
+            <string key="concept:name" value="E"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:02:32.009+01:00"/>
+            <string key="Activity" value="E"/>
+        </event>
+    </trace>
+    <trace>
+        <string key="concept:name" value="2"/>
+        <string key="creator" value="CorrelationMiner"/>
+        <event>
+            <string key="concept:name" value="A"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:02:15.027+01:00"/>
+            <string key="Activity" value="A"/>
+        </event>
+        <event>
+            <string key="concept:name" value="D"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:03:14.667+01:00"/>
+            <string key="Activity" value="D"/>
+        </event>
+        <event>
+            <string key="concept:name" value="E"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:05:06.953+01:00"/>
+            <string key="Activity" value="E"/>
+        </event>
+    </trace>
+    <trace>
+        <string key="concept:name" value="3"/>
+        <string key="creator" value="CorrelationMiner"/>
+        <event>
+            <string key="concept:name" value="A"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:02:27.213+01:00"/>
+            <string key="Activity" value="A"/>
+        </event>
+        <event>
+            <string key="concept:name" value="D"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:04:17.073+01:00"/>
+            <string key="Activity" value="D"/>
+        </event>
+        <event>
+            <string key="concept:name" value="E"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:06:51.147+01:00"/>
+            <string key="Activity" value="E"/>
+        </event>
+    </trace>
+    <trace>
+        <string key="concept:name" value="4"/>
+        <string key="creator" value="CorrelationMiner"/>
+        <event>
+            <string key="concept:name" value="A"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:03:06.265+01:00"/>
+            <string key="Activity" value="A"/>
+        </event>
+        <event>
+            <string key="concept:name" value="B"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:05:04.625+01:00"/>
+            <string key="Activity" value="B"/>
+        </event>
+        <event>
+            <string key="concept:name" value="E"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:07:26.947+01:00"/>
+            <string key="Activity" value="E"/>
+        </event>
+    </trace>
+    <trace>
+        <string key="concept:name" value="5"/>
+        <string key="creator" value="CorrelationMiner"/>
+        <event>
+            <string key="concept:name" value="A"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:03:40.696+01:00"/>
+            <string key="Activity" value="A"/>
+        </event>
+        <event>
+            <string key="concept:name" value="B"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:05:59.163+01:00"/>
+            <string key="Activity" value="B"/>
+        </event>
+        <event>
+            <string key="concept:name" value="E"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:07:49.918+01:00"/>
+            <string key="Activity" value="E"/>
+        </event>
+    </trace>
+    <trace>
+        <string key="concept:name" value="6"/>
+        <string key="creator" value="CorrelationMiner"/>
+        <event>
+            <string key="concept:name" value="A"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:04:18.064+01:00"/>
+            <string key="Activity" value="A"/>
+        </event>
+        <event>
+            <string key="concept:name" value="C"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:07:08.268+01:00"/>
+            <string key="Activity" value="C"/>
+        </event>
+        <event>
+            <string key="concept:name" value="E"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:09:05.182+01:00"/>
+            <string key="Activity" value="E"/>
+        </event>
+    </trace>
+    <trace>
+        <string key="concept:name" value="7"/>
+        <string key="creator" value="CorrelationMiner"/>
+        <event>
+            <string key="concept:name" value="A"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:05:54.933+01:00"/>
+            <string key="Activity" value="A"/>
+        </event>
+        <event>
+            <string key="concept:name" value="C"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:07:30.818+01:00"/>
+            <string key="Activity" value="C"/>
+        </event>
+        <event>
+            <string key="concept:name" value="E"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:09:17.740+01:00"/>
+            <string key="Activity" value="E"/>
+        </event>
+    </trace>
+    <trace>
+        <string key="concept:name" value="8"/>
+        <string key="creator" value="CorrelationMiner"/>
+        <event>
+            <string key="concept:name" value="A"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:06:20.495+01:00"/>
+            <string key="Activity" value="A"/>
+        </event>
+        <event>
+            <string key="concept:name" value="D"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:08:36.513+01:00"/>
+            <string key="Activity" value="D"/>
+        </event>
+        <event>
+            <string key="concept:name" value="E"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:10:03.948+01:00"/>
+            <string key="Activity" value="E"/>
+        </event>
+    </trace>
+    <trace>
+        <string key="concept:name" value="9"/>
+        <string key="creator" value="CorrelationMiner"/>
+        <event>
+            <string key="concept:name" value="A"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:06:41.289+01:00"/>
+            <string key="Activity" value="A"/>
+        </event>
+        <event>
+            <string key="concept:name" value="D"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:08:56.357+01:00"/>
+            <string key="Activity" value="D"/>
+        </event>
+        <event>
+            <string key="concept:name" value="E"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:10:20.015+01:00"/>
+            <string key="Activity" value="E"/>
+        </event>
+    </trace>
+    <trace>
+        <string key="concept:name" value="10"/>
+        <string key="creator" value="CorrelationMiner"/>
+        <event>
+            <string key="concept:name" value="A"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:07:13.883+01:00"/>
+            <string key="Activity" value="A"/>
+        </event>
+        <event>
+            <string key="concept:name" value="C"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:09:10.336+01:00"/>
+            <string key="Activity" value="C"/>
+        </event>
+        <event>
+            <string key="concept:name" value="E"/>
+            <string key="lifecycle:transition" value="complete"/>
+            <string key="org:resource" value="NOT_SET"/>
+            <string key="time:timestamp" value="2015-01-01T16:10:26.350+01:00"/>
+            <string key="Activity" value="E"/>
+        </event>
+    </trace>
+</log>

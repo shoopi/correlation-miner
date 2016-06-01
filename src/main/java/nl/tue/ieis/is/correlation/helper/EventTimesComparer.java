@@ -6,7 +6,7 @@ import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-import main.java.nl.tue.ieis.is.correlation.schema.xes_simple.Log.Trace.Event;
+import main.java.nl.tue.ieis.is.correlation.xes_simple.Log.Trace.Event;
 
 public class EventTimesComparer implements Comparator<Event> {
 	@Override

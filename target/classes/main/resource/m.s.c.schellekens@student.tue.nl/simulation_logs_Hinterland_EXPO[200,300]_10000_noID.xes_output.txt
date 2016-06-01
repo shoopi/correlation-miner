@@ -1,0 +1,7 @@
+Number of Traces in the original log: 10000
+A new log without case identifiers has been created -- Filename: simulation_logs_Hinterland_EXPO[200,300]_10000_noID.xes 
+ ================================= 
+
+
+===***=== Time mapping is set to **EQUAL_SIZE** method. ===***=== 
+# of events in the log: 110764

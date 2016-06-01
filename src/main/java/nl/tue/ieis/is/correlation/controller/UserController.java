@@ -20,7 +20,7 @@ public class UserController extends SelectorComposer<Component> {
 	private static final long serialVersionUID = 8670883952725538263L;
 	private static UserFunction uf = new UserFunction();
 
-	@Wire	private Textbox username, password;
+	@Wire	private Textbox email, password;
 	@Wire	private Textbox regUsername, regPassword, regFirstname, regLastename, regInstitute;
 	@Wire	private Label loginMsgLabel, regMsgLabel;
 	@Wire	private Window loginWin, regWin;
@@ -51,7 +51,7 @@ public class UserController extends SelectorComposer<Component> {
 	}
 	
 	private void login() {
-		String inputUsername = username.getValue();
+		String inputUsername = email.getValue();
 		String inputPassword = password.getValue();
 		try{
 			if(uf.login(inputUsername, inputPassword) != null) {

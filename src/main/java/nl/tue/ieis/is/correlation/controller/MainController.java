@@ -12,6 +12,7 @@ import java.io.PrintStream;
 
 import main.java.nl.tue.ieis.is.correlation.utility.*;
 import main.java.nl.tue.ieis.is.correlation.config.ProjectConfig;
+import main.java.nl.tue.ieis.is.correlation.milp.TraceCalculator;
 
 import org.apache.commons.io.IOUtils;
 import org.zkoss.zk.ui.Component;
@@ -22,6 +23,9 @@ import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.util.Clients;
 import org.zkoss.zul.Button;
+import org.zkoss.zul.Combobox;
+import org.zkoss.zul.Comboitem;
+import org.zkoss.zul.Doublebox;
 import org.zkoss.zul.Filedownload;
 import org.zkoss.zul.Image;
 import org.zkoss.zul.Label;
@@ -36,13 +40,17 @@ import main.java.nl.tue.ieis.is.correlation.*;
 public class MainController extends SelectorComposer<Component> {
 
 	private static final long serialVersionUID = -9000079319525018613L;
-	@Wire	private 	Button 		uploadIDBtn, uploadNoIDBtn, downloadLogBtn, downloadSampleLogBtn, runSampleLogBtn;
+	@Wire	private 	Button 		uploadIDBtn, uploadNoIDBtn, downloadLogBtn, 
+	downloadSampleLogBtn, runSampleLogBtn,downloadGenLogBtn, downloadConsoleBtn;
 	@Wire	private 	Image 		processImage, correlationImgage;
 	@Wire	private 	Vlayout		cmdLogLayout;
 	@Wire	private		Slider 		psThreshold;
 	@Wire	private 	Textbox 	sourceActivityTxtBox, sinkActivityTxtBox;
 	@Wire 	private 	Radiogroup	timeRadio, sampleLogRadio;
 	//@Wire	private		Applet 		processApplet;
+	@Wire	private 	Combobox	generatedLogCombo;
+	@Wire	private		Comboitem	trueGenerateLog, falseGenerateLog;
+	@Wire	private 	Doublebox	logThresholdDoublebox;
 			
 	
 	private String username;
@@ -51,6 +59,7 @@ public class MainController extends SelectorComposer<Component> {
 	
 	public void doAfterCompose(Component comp) throws Exception {
 		super.doAfterCompose(comp);
+		generatedLogCombo.setSelectedItem(falseGenerateLog);
 		User user = (User) (Sessions.getCurrent()).getAttribute("user");
 		if(user == null) { 
 			uploadIDBtn.setDisabled(true); 
@@ -61,6 +70,7 @@ public class MainController extends SelectorComposer<Component> {
 			uploadNoIDBtn.setDisabled(false); 
 		}
 		psThreshold.setCurpos(100);
+		generatedLogCombo.setSelectedItem(falseGenerateLog);
 	}
 	
 	@Listen("onUpload = #uploadIDBtn")
@@ -82,6 +92,13 @@ public class MainController extends SelectorComposer<Component> {
 					double threshold = (double) ((double)psThreshold.getCurpos() / 100.00);
 					lm.setPsThreshold(threshold);
 					lm.setStdDeviationEnabled(Boolean.valueOf(timeRadio.getSelectedItem().getValue().toString()));
+					
+					if(generatedLogCombo.getSelectedItem().equals(trueGenerateLog)) {
+						lm.setTraceLogProducer(true);
+					} else {
+						lm.setTraceLogProducer(false);
+					}
+					TraceCalculator.factor = logThresholdDoublebox.getValue();
 					lm.run(username, filename);
 					correlationImgage.setContent(lm.getCorrelationImage());
 					sourceActivityTxtBox.setValue(lm.getStartActivity());

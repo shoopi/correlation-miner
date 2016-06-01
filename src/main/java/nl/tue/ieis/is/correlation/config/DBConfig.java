@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class DBConfig {
 	
-	private static final String dbLocation = ProjectConfig.projectPath + "/resources/cor.db";
+private static final String dbLocation = ProjectConfig.projectPath + "/resources/cor.db";
 	
 	public static Connection getConnection()
 	  {

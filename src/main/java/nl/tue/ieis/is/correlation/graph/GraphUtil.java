@@ -184,7 +184,7 @@ public class GraphUtil extends JApplet implements MouseWheelListener {
 	private void addPossibleEdgesToGraph() {
 		//Map<Edge, Integer> weightedEdges = new HashMap<Edge, Integer>();
 		for(Map.Entry<PossibleEdge, Integer> edge : edgeList.entrySet()) {
-			Edge e = new Edge(getNodeByName(edge.getKey().getActivity1()),  getNodeByName(edge.getKey().getActivity2()), edge.getValue(), edge.getKey().getProbability());
+			Edge e = new Edge(getNodeByName(edge.getKey().getActivity1()),  getNodeByName(edge.getKey().getActivity2()), edge.getValue(), edge.getKey().getProbability(), edge.getKey().getDuration());
 			graph.setEdgeWeight(e, edge.getValue());
 			graph.addEdge((getNodeByName(edge.getKey().getActivity1())),  getNodeByName(edge.getKey().getActivity2()), e); 
 			//weightedEdges.put(e, edge.getValue());

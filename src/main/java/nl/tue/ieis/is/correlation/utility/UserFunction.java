@@ -1,5 +1,6 @@
 package main.java.nl.tue.ieis.is.correlation.utility;
 
+
 import main.java.nl.tue.ieis.is.correlation.config.UserDBConfig;
 
 public class UserFunction {

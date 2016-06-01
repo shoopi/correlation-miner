@@ -1,0 +1,334 @@
+Number of Traces in the original log: 1000
+A new log without case identifiers has been created -- Filename: simulation_logs_Harbour(2)_EXPO[1,100]_1000_noID.xes 
+ ================================= 
+
+
+===***=== Time mapping is set to **EQUAL_SIZE** method. ===***=== 
+# of events in the log: 10688
+**** Threshold is manually set to 1.0 of all values.
+Before P/S threshold we had 72 elements.
+After P/S threshold we have 72 elements. [Removed: 0]
+
+=================== Duration Matrix ===================
+
+
+ FINAL SELECTED EDGE LIST:
+Edge (Internal Transport of Cargo --> Check Berth) 		** Duration: PT1.012S 		** P/S Fraction: 0.500345 		** Edge-Ratio: 2022.604402961956
+Edge (End --> Load Cargo onto Sea Vessel) 		** Duration: PT23.144S 		** P/S Fraction: 0.4988555 		** Edge-Ratio: 46394.19631536587
+Edge (Transport of Cargo to Berth --> Load Cargo onto Sea Vessel) 		** Duration: PT24.369S 		** P/S Fraction: 0.500848 		** Edge-Ratio: 48655.480305402045
+Edge (Harbour Gate-in  process of Cargo --> Internal Transport of Cargo) 		** Duration: PT30.060S 		** P/S Fraction: 0.501082 		** Edge-Ratio: 59990.1812477798
+Edge (Harbour Gate-in  process of Cargo --> Check Berth) 		** Duration: PT31.072S 		** P/S Fraction: 0.501104 		** Edge-Ratio: 62007.08834892557
+Edge (Harbour Gate-in  process of Cargo --> Start) 		** Duration: PT34.407S 		** P/S Fraction: 0.4751085 		** Edge-Ratio: 72419.24739296392
+Edge (Internal Transport of Cargo --> Start) 		** Duration: PT36.072S 		** P/S Fraction: 0.4744995 		** Edge-Ratio: 76021.15492218643
+Edge (Check Berth --> Start) 		** Duration: PT36.101S 		** P/S Fraction: 0.4744765 		** Edge-Ratio: 76085.96000012645
+Edge (Receive Pre-notification of arrival time from Cargo --> Start) 		** Duration: PT49.266S 		** P/S Fraction: 0.4979285 		** Edge-Ratio: 98941.91635947731
+Edge (Internal Storage of Cargo --> Transport of Cargo to Berth) 		** Duration: PT69.382S 		** P/S Fraction: 0.4688110465116279 		** Edge-Ratio: 147995.6594800057
+Edge (Receive Pre-notification of arrival time from Cargo --> End) 		** Duration: PT86.983S 		** P/S Fraction: 0.5785405 		** Edge-Ratio: 150349.02483058663
+Edge (Internal Transport of Cargo --> End) 		** Duration: PT93.227S 		** P/S Fraction: 0.556459 		** Edge-Ratio: 167536.1527084655
+Edge (Check Berth --> End) 		** Duration: PT95.149S 		** P/S Fraction: 0.5564245 		** Edge-Ratio: 171000.73774609136
+Edge (Harbour Gate-in  process of Cargo --> End) 		** Duration: PT97.181S 		** P/S Fraction: 0.5570405 		** Edge-Ratio: 174459.48723656536
+Edge (Start --> Receive Pre-notification of arrival time from Cargo) 		** Duration: PT92.744S 		** P/S Fraction: 0.5019145 		** Edge-Ratio: 184780.47555908424
+Edge (Internal Storage of Cargo --> End) 		** Duration: PT87.886S 		** P/S Fraction: 0.469890261627907 		** Edge-Ratio: 187035.15943387325
+Edge (Internal Storage of Cargo --> Load Cargo onto Sea Vessel) 		** Duration: PT87.896S 		** P/S Fraction: 0.46925581395348837 		** Edge-Ratio: 187309.3468133611
+Edge (Transport of Cargo to Berth --> End) 		** Duration: PT119.972S 		** P/S Fraction: 0.501499 		** Edge-Ratio: 239226.79805941787
+Edge (Start --> Internal Transport of Cargo) 		** Duration: PT128.551S 		** P/S Fraction: 0.5255005 		** Edge-Ratio: 244625.83765381764
+Edge (Start --> Check Berth) 		** Duration: PT128.627S 		** P/S Fraction: 0.5255235 		** Edge-Ratio: 244759.74908829003
+Edge (End --> Internal Transport of Cargo) 		** Duration: PT119.100S 		** P/S Fraction: 0.443536 		** Edge-Ratio: 268523.86277551315
+Edge (End --> Check Berth) 		** Duration: PT119.968S 		** P/S Fraction: 0.4435535 		** Edge-Ratio: 270470.1913072493
+Edge (End --> Receive Pre-notification of arrival time from Cargo) 		** Duration: PT124.865S 		** P/S Fraction: 0.4214565 		** Edge-Ratio: 296270.1963310567
+Edge (Load Cargo onto Sea Vessel --> End) 		** Duration: PT153.924S 		** P/S Fraction: 0.500232 		** Edge-Ratio: 307705.2247757041
+Edge (Transport of Cargo to Berth --> Internal Storage of Cargo) 		** Duration: PT203.952S 		** P/S Fraction: 0.5311889534883721 		** Edge-Ratio: 383953.7676012017
+Edge (End --> Internal Storage of Cargo) 		** Duration: PT244.071S 		** P/S Fraction: 0.5301097383720931 		** Edge-Ratio: 460415.9899976831
+Edge (Load Cargo onto Sea Vessel --> Internal Storage of Cargo) 		** Duration: PT245.794S 		** P/S Fraction: 0.5307441860465116 		** Edge-Ratio: 463111.99719568837
+Edge (Start --> Harbour Gate-in  process of Cargo) 		** Duration: PT244.547S 		** P/S Fraction: 0.52488 		** Edge-Ratio: 465910.3033074226
+Edge (End --> Transport of Cargo to Berth) 		** Duration: PT235.071S 		** P/S Fraction: 0.498445 		** Edge-Ratio: 471608.7030665369
+Edge (End --> Harbour Gate-in  process of Cargo) 		** Duration: PT237.173S 		** P/S Fraction: 0.442959 		** Edge-Ratio: 535428.7868628926
+Edge (Start --> Load Cargo onto Sea Vessel) 		** Duration: PT2332.282S 		** P/S Fraction: 0.5794735 		** Edge-Ratio: 4024829.435686015
+Edge (Start --> Transport of Cargo to Berth) 		** Duration: PT2330.884S 		** P/S Fraction: 0.57903 		** Edge-Ratio: 4025497.815311814
+Edge (Receive Pre-notification of arrival time from Cargo --> Harbour Gate-in  process of Cargo) 		** Duration: PT2320.861S 		** P/S Fraction: 0.523199 		** Edge-Ratio: 4435904.885139307
+Edge (Receive Pre-notification of arrival time from Cargo --> Internal Transport of Cargo) 		** Duration: PT2350.921S 		** P/S Fraction: 0.52379 		** Edge-Ratio: 4488289.199870178
+Edge (Receive Pre-notification of arrival time from Cargo --> Check Berth) 		** Duration: PT2351.933S 		** P/S Fraction: 0.523809 		** Edge-Ratio: 4490058.399149309
+Edge (Harbour Gate-in  process of Cargo --> Internal Storage of Cargo) 		** Duration: PT3084.465S 		** P/S Fraction: 0.5877296511627907 		** Edge-Ratio: 5248101.7316338485
+Edge (Check Berth --> Internal Storage of Cargo) 		** Duration: PT3085.688S 		** P/S Fraction: 0.5871598837209302 		** Edge-Ratio: 5255277.285712164
+Edge (Internal Transport of Cargo --> Internal Storage of Cargo) 		** Duration: PT3085.844S 		** P/S Fraction: 0.5871773255813953 		** Edge-Ratio: 5255386.857700172
+Edge (Receive Pre-notification of arrival time from Cargo --> Internal Storage of Cargo) 		** Duration: PT3280.246S 		** P/S Fraction: 0.6086002906976744 		** Edge-Ratio: 5389819.969096072
+Edge (Start --> Internal Storage of Cargo) 		** Duration: PT3361.647S 		** P/S Fraction: 0.6102718023255814 		** Edge-Ratio: 5508442.282913399
+Edge (Check Berth --> Transport of Cargo to Berth) 		** Duration: PT8805.432S 		** P/S Fraction: 0.555289 		** Edge-Ratio: 1.5857385973790223E7
+Edge (Internal Transport of Cargo --> Transport of Cargo to Berth) 		** Duration: PT8806.444S 		** P/S Fraction: 0.555303 		** Edge-Ratio: 1.5858808614396105E7
+Edge (Check Berth --> Load Cargo onto Sea Vessel) 		** Duration: PT8829.801S 		** P/S Fraction: 0.555732 		** Edge-Ratio: 1.5888595582043143E7
+Edge (Internal Transport of Cargo --> Load Cargo onto Sea Vessel) 		** Duration: PT8830.813S 		** P/S Fraction: 0.555749 		** Edge-Ratio: 1.5889930526190778E7
+Edge (Harbour Gate-in  process of Cargo --> Transport of Cargo to Berth) 		** Duration: PT8836.504S 		** P/S Fraction: 0.555873 		** Edge-Ratio: 1.5896623869121186E7
+Edge (Harbour Gate-in  process of Cargo --> Load Cargo onto Sea Vessel) 		** Duration: PT8860.873S 		** P/S Fraction: 0.556336 		** Edge-Ratio: 1.5927196873831639E7
+Edge (Receive Pre-notification of arrival time from Cargo --> Transport of Cargo to Berth) 		** Duration: PT11157.365S 		** P/S Fraction: 0.577355 		** Edge-Ratio: 1.9324964709753964E7
+Edge (Receive Pre-notification of arrival time from Cargo --> Load Cargo onto Sea Vessel) 		** Duration: PT11181.734S 		** P/S Fraction: 0.57783 		** Edge-Ratio: 1.9351252098368034E7
+Edge (Start --> End) 		** Duration: PT11362.943S 		** P/S Fraction: 0.58017625 		** Edge-Ratio: 1.9585329458074164E7
+======================================
+
+
+=================== Starting ILP ===================
+Optimal objective: 4237505.226366734
+SOLUTION 0
+1. Internal Transport of Cargo --> Check Berth: (1000)
+2. Transport of Cargo to Berth --> Load Cargo onto Sea Vessel: (1000)
+3. Harbour Gate-in  process of Cargo --> Internal Transport of Cargo: (1000)
+4. Internal Storage of Cargo --> Transport of Cargo to Berth: (688)
+5. Receive Pre-notification of arrival time from Cargo --> End: (688)
+6. Check Berth --> End: (1000)
+7. Start --> Receive Pre-notification of arrival time from Cargo: (1000)
+8. Load Cargo onto Sea Vessel --> End: (312)
+9. Load Cargo onto Sea Vessel --> Internal Storage of Cargo: (688)
+10. Start --> Harbour Gate-in  process of Cargo: (688)
+11. Start --> Transport of Cargo to Berth: (312)
+12. Receive Pre-notification of arrival time from Cargo --> Harbour Gate-in  process of Cargo: (312)
+Objective Value: 4237505.226366734
+======================================
+
+*******************===Finding Cycles====*******************
+# of edges in the graph: 12
+Load Cargo onto Sea Vessel --> Internal Storage of Cargo (463111.99719568837)
+Internal Storage of Cargo --> Transport of Cargo to Berth (147995.6594800057)
+Transport of Cargo to Berth --> Load Cargo onto Sea Vessel (48655.480305402045)
+Transport of Cargo to Berth --> Load Cargo onto Sea Vessel (48655.480305402045)
+
+======================================
+# of loop: 1 = # of edges to be removed: 1
+[REMOVED] Load Cargo onto Sea Vessel --> Internal Storage of Cargo
+# of possible edges [BEFORE] loop removal: 49
+# of possible edges [AFTER] loop removal: 48
+
+Optimal objective: 9123723.201959582
+SOLUTION 0
+1. Internal Transport of Cargo --> Check Berth: (1000)
+2. Transport of Cargo to Berth --> Load Cargo onto Sea Vessel: (1000)
+3. Harbour Gate-in  process of Cargo --> Internal Transport of Cargo: (1000)
+4. Internal Storage of Cargo --> Transport of Cargo to Berth: (688)
+5. Receive Pre-notification of arrival time from Cargo --> End: (688)
+6. Check Berth --> End: (312)
+7. Start --> Receive Pre-notification of arrival time from Cargo: (1000)
+8. Load Cargo onto Sea Vessel --> End: (1000)
+9. Start --> Harbour Gate-in  process of Cargo: (688)
+10. Start --> Transport of Cargo to Berth: (312)
+11. Receive Pre-notification of arrival time from Cargo --> Harbour Gate-in  process of Cargo: (312)
+12. Check Berth --> Internal Storage of Cargo: (688)
+Objective Value: 9123723.201959582
+======================================
+
+ === Compare all ''possible edges'' with the original log === 
+Remaining size: 11
+[End --> End] is not part of possible edges.
+[Start --> Start] is not part of possible edges.
+[Check Berth --> Internal Transport of Cargo] is not part of possible edges.
+[Harbour Gate-in  process of Cargo --> Receive Pre-notification of arrival time from Cargo] is not part of possible edges.
+[Internal Storage of Cargo --> Harbour Gate-in  process of Cargo] is not part of possible edges.
+[Check Berth --> Receive Pre-notification of arrival time from Cargo] is not part of possible edges.
+[Transport of Cargo to Berth --> Start] is not part of possible edges.
+[Internal Transport of Cargo --> Receive Pre-notification of arrival time from Cargo] is not part of possible edges.
+[Transport of Cargo to Berth --> Harbour Gate-in  process of Cargo] is not part of possible edges.
+[Transport of Cargo to Berth --> Receive Pre-notification of arrival time from Cargo] is not part of possible edges.
+[End --> Start] is not part of possible edges.
+
+ === Edges that are in the original log but not in the correlation miner model [FN]) ===
+[TP]: 12
+[FN]: 40
+[End --> End] is not part of selected edges.
+[Start --> Start] is not part of selected edges.
+[Internal Transport of Cargo --> End] is not part of selected edges.
+[Start --> End] is not part of selected edges.
+[Transport of Cargo to Berth --> End] is not part of selected edges.
+[Check Berth --> Internal Transport of Cargo] is not part of selected edges.
+[Start --> Load Cargo onto Sea Vessel] is not part of selected edges.
+[End --> Check Berth] is not part of selected edges.
+[End --> Transport of Cargo to Berth] is not part of selected edges.
+[End --> Internal Storage of Cargo] is not part of selected edges.
+[Harbour Gate-in  process of Cargo --> Transport of Cargo to Berth] is not part of selected edges.
+[Internal Storage of Cargo --> Load Cargo onto Sea Vessel] is not part of selected edges.
+[Harbour Gate-in  process of Cargo --> Receive Pre-notification of arrival time from Cargo] is not part of selected edges.
+[Start --> Internal Transport of Cargo] is not part of selected edges.
+[End --> Internal Transport of Cargo] is not part of selected edges.
+[Internal Storage of Cargo --> Harbour Gate-in  process of Cargo] is not part of selected edges.
+[Harbour Gate-in  process of Cargo --> Internal Storage of Cargo] is not part of selected edges.
+[Internal Transport of Cargo --> Transport of Cargo to Berth] is not part of selected edges.
+[Check Berth --> Transport of Cargo to Berth] is not part of selected edges.
+[Harbour Gate-in  process of Cargo --> Start] is not part of selected edges.
+[Receive Pre-notification of arrival time from Cargo --> Internal Transport of Cargo] is not part of selected edges.
+[Harbour Gate-in  process of Cargo --> Load Cargo onto Sea Vessel] is not part of selected edges.
+[Harbour Gate-in  process of Cargo --> Check Berth] is not part of selected edges.
+[Internal Transport of Cargo --> Start] is not part of selected edges.
+[Check Berth --> Receive Pre-notification of arrival time from Cargo] is not part of selected edges.
+[Receive Pre-notification of arrival time from Cargo --> Start] is not part of selected edges.
+[Transport of Cargo to Berth --> Start] is not part of selected edges.
+[Internal Transport of Cargo --> Receive Pre-notification of arrival time from Cargo] is not part of selected edges.
+[Check Berth --> Start] is not part of selected edges.
+[End --> Harbour Gate-in  process of Cargo] is not part of selected edges.
+[End --> Receive Pre-notification of arrival time from Cargo] is not part of selected edges.
+[Transport of Cargo to Berth --> Harbour Gate-in  process of Cargo] is not part of selected edges.
+[Transport of Cargo to Berth --> Receive Pre-notification of arrival time from Cargo] is not part of selected edges.
+[End --> Start] is not part of selected edges.
+[Receive Pre-notification of arrival time from Cargo --> Internal Storage of Cargo] is not part of selected edges.
+[Start --> Internal Storage of Cargo] is not part of selected edges.
+[Check Berth --> Load Cargo onto Sea Vessel] is not part of selected edges.
+[Internal Transport of Cargo --> Load Cargo onto Sea Vessel] is not part of selected edges.
+[Internal Transport of Cargo --> Internal Storage of Cargo] is not part of selected edges.
+[Receive Pre-notification of arrival time from Cargo --> Load Cargo onto Sea Vessel] is not part of selected edges.
+
+ === Edges that are not in the original log but they are in the correlation miner model [FP]) ===
+[FP]: 0
+[EQUAL_SIZE] RECALL: 0.23076923076923078
+[EQUAL_SIZE] PRECISION: 1.0
+********************************************************************************
+===***=== Time mapping is set to **GREEDY** method. ===***=== 
+
+=================== Duration Matrix ===================
+
+
+ FINAL SELECTED EDGE LIST:
+Edge (Internal Transport of Cargo --> Check Berth) 		** Duration: PT1.012S 		** P/S Fraction: 0.500345 		** Edge-Ratio: 2022.604402961956
+Edge (End --> Load Cargo onto Sea Vessel) 		** Duration: PT23.144S 		** P/S Fraction: 0.4988555 		** Edge-Ratio: 46394.19631536587
+Edge (Transport of Cargo to Berth --> Load Cargo onto Sea Vessel) 		** Duration: PT24.369S 		** P/S Fraction: 0.500848 		** Edge-Ratio: 48655.480305402045
+Edge (Harbour Gate-in  process of Cargo --> Internal Transport of Cargo) 		** Duration: PT30.060S 		** P/S Fraction: 0.501082 		** Edge-Ratio: 59990.1812477798
+Edge (Harbour Gate-in  process of Cargo --> Check Berth) 		** Duration: PT31.072S 		** P/S Fraction: 0.501104 		** Edge-Ratio: 62007.08834892557
+Edge (Load Cargo onto Sea Vessel --> End) 		** Duration: PT43.772S 		** P/S Fraction: 0.500232 		** Edge-Ratio: 87503.39842313167
+Edge (Start --> Receive Pre-notification of arrival time from Cargo) 		** Duration: PT92.744S 		** P/S Fraction: 0.5019145 		** Edge-Ratio: 184780.47555908424
+Edge (Internal Storage of Cargo --> End) 		** Duration: PT89.013S 		** P/S Fraction: 0.469890261627907 		** Edge-Ratio: 189433.5917744278
+Edge (Start --> Internal Transport of Cargo) 		** Duration: PT128.551S 		** P/S Fraction: 0.5255005 		** Edge-Ratio: 244625.83765381764
+Edge (Start --> Check Berth) 		** Duration: PT128.627S 		** P/S Fraction: 0.5255235 		** Edge-Ratio: 244759.74908829003
+Edge (End --> Internal Transport of Cargo) 		** Duration: PT119.100S 		** P/S Fraction: 0.443536 		** Edge-Ratio: 268523.86277551315
+Edge (End --> Check Berth) 		** Duration: PT119.968S 		** P/S Fraction: 0.4435535 		** Edge-Ratio: 270470.1913072493
+Edge (End --> Receive Pre-notification of arrival time from Cargo) 		** Duration: PT124.865S 		** P/S Fraction: 0.4214565 		** Edge-Ratio: 296270.1963310567
+Edge (Transport of Cargo to Berth --> Internal Storage of Cargo) 		** Duration: PT203.952S 		** P/S Fraction: 0.5311889534883721 		** Edge-Ratio: 383953.7676012017
+Edge (End --> Internal Storage of Cargo) 		** Duration: PT244.071S 		** P/S Fraction: 0.5301097383720931 		** Edge-Ratio: 460415.9899976831
+Edge (Load Cargo onto Sea Vessel --> Internal Storage of Cargo) 		** Duration: PT245.794S 		** P/S Fraction: 0.5307441860465116 		** Edge-Ratio: 463111.99719568837
+Edge (Start --> Harbour Gate-in  process of Cargo) 		** Duration: PT244.547S 		** P/S Fraction: 0.52488 		** Edge-Ratio: 465910.3033074226
+Edge (End --> Transport of Cargo to Berth) 		** Duration: PT235.071S 		** P/S Fraction: 0.498445 		** Edge-Ratio: 471608.7030665369
+Edge (End --> Harbour Gate-in  process of Cargo) 		** Duration: PT237.173S 		** P/S Fraction: 0.442959 		** Edge-Ratio: 535428.7868628926
+Edge (Transport of Cargo to Berth --> End) 		** Duration: PT284.679S 		** P/S Fraction: 0.501499 		** Edge-Ratio: 567656.1668118979
+Edge (Receive Pre-notification of arrival time from Cargo --> Start) 		** Duration: PT289.258S 		** P/S Fraction: 0.4979285 		** Edge-Ratio: 580922.7630071386
+Edge (Internal Transport of Cargo --> End) 		** Duration: PT1167.068S 		** P/S Fraction: 0.556459 		** Edge-Ratio: 2097311.7516295
+Edge (Harbour Gate-in  process of Cargo --> End) 		** Duration: PT1219.433S 		** P/S Fraction: 0.5570405 		** Edge-Ratio: 2189128.079556154
+Edge (Check Berth --> End) 		** Duration: PT1254.381S 		** P/S Fraction: 0.5564245 		** Edge-Ratio: 2254359.755905788
+Edge (Receive Pre-notification of arrival time from Cargo --> End) 		** Duration: PT2142.335S 		** P/S Fraction: 0.5785405 		** Edge-Ratio: 3702999.185018162
+Edge (Start --> Load Cargo onto Sea Vessel) 		** Duration: PT2332.282S 		** P/S Fraction: 0.5794735 		** Edge-Ratio: 4024829.435686015
+Edge (Start --> Transport of Cargo to Berth) 		** Duration: PT2330.884S 		** P/S Fraction: 0.57903 		** Edge-Ratio: 4025497.815311814
+Edge (Receive Pre-notification of arrival time from Cargo --> Harbour Gate-in  process of Cargo) 		** Duration: PT2320.861S 		** P/S Fraction: 0.523199 		** Edge-Ratio: 4435904.885139307
+Edge (Receive Pre-notification of arrival time from Cargo --> Internal Transport of Cargo) 		** Duration: PT2350.921S 		** P/S Fraction: 0.52379 		** Edge-Ratio: 4488289.199870178
+Edge (Receive Pre-notification of arrival time from Cargo --> Check Berth) 		** Duration: PT2351.933S 		** P/S Fraction: 0.523809 		** Edge-Ratio: 4490058.399149309
+Edge (Harbour Gate-in  process of Cargo --> Internal Storage of Cargo) 		** Duration: PT3084.465S 		** P/S Fraction: 0.5877296511627907 		** Edge-Ratio: 5248101.7316338485
+Edge (Check Berth --> Internal Storage of Cargo) 		** Duration: PT3085.688S 		** P/S Fraction: 0.5871598837209302 		** Edge-Ratio: 5255277.285712164
+Edge (Internal Transport of Cargo --> Internal Storage of Cargo) 		** Duration: PT3085.844S 		** P/S Fraction: 0.5871773255813953 		** Edge-Ratio: 5255386.857700172
+Edge (Receive Pre-notification of arrival time from Cargo --> Internal Storage of Cargo) 		** Duration: PT3280.246S 		** P/S Fraction: 0.6086002906976744 		** Edge-Ratio: 5389819.969096072
+Edge (Start --> Internal Storage of Cargo) 		** Duration: PT3361.647S 		** P/S Fraction: 0.6102718023255814 		** Edge-Ratio: 5508442.282913399
+Edge (Check Berth --> Transport of Cargo to Berth) 		** Duration: PT8805.432S 		** P/S Fraction: 0.555289 		** Edge-Ratio: 1.5857385973790223E7
+Edge (Internal Transport of Cargo --> Transport of Cargo to Berth) 		** Duration: PT8806.444S 		** P/S Fraction: 0.555303 		** Edge-Ratio: 1.5858808614396105E7
+Edge (Check Berth --> Load Cargo onto Sea Vessel) 		** Duration: PT8829.801S 		** P/S Fraction: 0.555732 		** Edge-Ratio: 1.5888595582043143E7
+Edge (Internal Transport of Cargo --> Load Cargo onto Sea Vessel) 		** Duration: PT8830.813S 		** P/S Fraction: 0.555749 		** Edge-Ratio: 1.5889930526190778E7
+Edge (Harbour Gate-in  process of Cargo --> Transport of Cargo to Berth) 		** Duration: PT8836.504S 		** P/S Fraction: 0.555873 		** Edge-Ratio: 1.5896623869121186E7
+Edge (Harbour Gate-in  process of Cargo --> Load Cargo onto Sea Vessel) 		** Duration: PT8860.873S 		** P/S Fraction: 0.556336 		** Edge-Ratio: 1.5927196873831639E7
+Edge (Receive Pre-notification of arrival time from Cargo --> Transport of Cargo to Berth) 		** Duration: PT11157.365S 		** P/S Fraction: 0.577355 		** Edge-Ratio: 1.9324964709753964E7
+Edge (Receive Pre-notification of arrival time from Cargo --> Load Cargo onto Sea Vessel) 		** Duration: PT11181.734S 		** P/S Fraction: 0.57783 		** Edge-Ratio: 1.9351252098368034E7
+Edge (Start --> End) 		** Duration: PT11362.943S 		** P/S Fraction: 0.58017625 		** Edge-Ratio: 1.9585329458074164E7
+======================================
+
+
+=================== Starting ILP ===================
+Optimal objective: 1.169105784715027E7
+SOLUTION 0
+1. Internal Transport of Cargo --> Check Berth: (1000)
+2. Transport of Cargo to Berth --> Load Cargo onto Sea Vessel: (1000)
+3. Harbour Gate-in  process of Cargo --> Internal Transport of Cargo: (1000)
+4. Load Cargo onto Sea Vessel --> End: (312)
+5. Start --> Receive Pre-notification of arrival time from Cargo: (1000)
+6. Internal Storage of Cargo --> End: (688)
+7. Load Cargo onto Sea Vessel --> Internal Storage of Cargo: (688)
+8. Check Berth --> End: (1000)
+9. Start --> Transport of Cargo to Berth: (1000)
+10. Receive Pre-notification of arrival time from Cargo --> Harbour Gate-in  process of Cargo: (1000)
+Objective Value: 1.169105784715027E7
+======================================
+
+*******************===Finding Cycles====*******************
+# of edges in the graph: 10
+
+ === Compare all ''possible edges'' with the original log === 
+Remaining size: 16
+[End --> End] is not part of possible edges.
+[Start --> Start] is not part of possible edges.
+[Check Berth --> Internal Transport of Cargo] is not part of possible edges.
+[Internal Storage of Cargo --> Load Cargo onto Sea Vessel] is not part of possible edges.
+[Harbour Gate-in  process of Cargo --> Receive Pre-notification of arrival time from Cargo] is not part of possible edges.
+[Internal Storage of Cargo --> Harbour Gate-in  process of Cargo] is not part of possible edges.
+[Internal Storage of Cargo --> Transport of Cargo to Berth] is not part of possible edges.
+[Harbour Gate-in  process of Cargo --> Start] is not part of possible edges.
+[Internal Transport of Cargo --> Start] is not part of possible edges.
+[Check Berth --> Receive Pre-notification of arrival time from Cargo] is not part of possible edges.
+[Transport of Cargo to Berth --> Start] is not part of possible edges.
+[Internal Transport of Cargo --> Receive Pre-notification of arrival time from Cargo] is not part of possible edges.
+[Check Berth --> Start] is not part of possible edges.
+[Transport of Cargo to Berth --> Harbour Gate-in  process of Cargo] is not part of possible edges.
+[Transport of Cargo to Berth --> Receive Pre-notification of arrival time from Cargo] is not part of possible edges.
+[End --> Start] is not part of possible edges.
+
+ === Edges that are in the original log but not in the correlation miner model [FN]) ===
+[TP]: 8
+[FN]: 44
+[End --> End] is not part of selected edges.
+[Start --> Start] is not part of selected edges.
+[Internal Transport of Cargo --> End] is not part of selected edges.
+[Start --> End] is not part of selected edges.
+[Receive Pre-notification of arrival time from Cargo --> End] is not part of selected edges.
+[Transport of Cargo to Berth --> End] is not part of selected edges.
+[Check Berth --> Internal Transport of Cargo] is not part of selected edges.
+[Start --> Load Cargo onto Sea Vessel] is not part of selected edges.
+[End --> Check Berth] is not part of selected edges.
+[End --> Transport of Cargo to Berth] is not part of selected edges.
+[End --> Internal Storage of Cargo] is not part of selected edges.
+[Harbour Gate-in  process of Cargo --> Transport of Cargo to Berth] is not part of selected edges.
+[Internal Storage of Cargo --> Load Cargo onto Sea Vessel] is not part of selected edges.
+[Harbour Gate-in  process of Cargo --> Receive Pre-notification of arrival time from Cargo] is not part of selected edges.
+[Start --> Internal Transport of Cargo] is not part of selected edges.
+[End --> Internal Transport of Cargo] is not part of selected edges.
+[Internal Storage of Cargo --> Harbour Gate-in  process of Cargo] is not part of selected edges.
+[Harbour Gate-in  process of Cargo --> Internal Storage of Cargo] is not part of selected edges.
+[Internal Transport of Cargo --> Transport of Cargo to Berth] is not part of selected edges.
+[Check Berth --> Transport of Cargo to Berth] is not part of selected edges.
+[Internal Storage of Cargo --> Transport of Cargo to Berth] is not part of selected edges.
+[Harbour Gate-in  process of Cargo --> Start] is not part of selected edges.
+[Receive Pre-notification of arrival time from Cargo --> Internal Transport of Cargo] is not part of selected edges.
+[Harbour Gate-in  process of Cargo --> Load Cargo onto Sea Vessel] is not part of selected edges.
+[Harbour Gate-in  process of Cargo --> Check Berth] is not part of selected edges.
+[Internal Transport of Cargo --> Start] is not part of selected edges.
+[Check Berth --> Receive Pre-notification of arrival time from Cargo] is not part of selected edges.
+[Receive Pre-notification of arrival time from Cargo --> Start] is not part of selected edges.
+[Transport of Cargo to Berth --> Start] is not part of selected edges.
+[Internal Transport of Cargo --> Receive Pre-notification of arrival time from Cargo] is not part of selected edges.
+[Check Berth --> Start] is not part of selected edges.
+[End --> Harbour Gate-in  process of Cargo] is not part of selected edges.
+[End --> Receive Pre-notification of arrival time from Cargo] is not part of selected edges.
+[Transport of Cargo to Berth --> Harbour Gate-in  process of Cargo] is not part of selected edges.
+[Transport of Cargo to Berth --> Receive Pre-notification of arrival time from Cargo] is not part of selected edges.
+[End --> Start] is not part of selected edges.
+[Receive Pre-notification of arrival time from Cargo --> Internal Storage of Cargo] is not part of selected edges.
+[Start --> Harbour Gate-in  process of Cargo] is not part of selected edges.
+[Start --> Internal Storage of Cargo] is not part of selected edges.
+[Check Berth --> Load Cargo onto Sea Vessel] is not part of selected edges.
+[Internal Transport of Cargo --> Load Cargo onto Sea Vessel] is not part of selected edges.
+[Internal Transport of Cargo --> Internal Storage of Cargo] is not part of selected edges.
+[Check Berth --> Internal Storage of Cargo] is not part of selected edges.
+[Receive Pre-notification of arrival time from Cargo --> Load Cargo onto Sea Vessel] is not part of selected edges.
+
+ === Edges that are not in the original log but they are in the correlation miner model [FP]) ===
+[FP]: 2
+[Internal Storage of Cargo --> End] is not part of the original log.
+[Load Cargo onto Sea Vessel --> Internal Storage of Cargo] is not part of the original log.
+RECALL: 0.15384615384615385
+[GREEDY] RECALL: 0.15384615384615385
+[GREEDY] PRECISION: 0.8
+********************************************************************************
+**[EQUAL_SIZE]** has been accepted as the final model.
+
+ ==================== RESULT ====================
+||.............................................||
+||.........FINAL RECALL: 0,23..................||
+||.............................................||
+||........FINAL PRECISION: 1,00................||
+||.............................................||
+=================================================

@@ -1,15 +1,15 @@
 <?page id="CorrelationMiner" title="Correlation Miner" cacheable="true" automaticTimeout="false"?>
-<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<?link rel="stylesheet" type="text/css" href="/cm-style.css"?>
 <?link href="/imgs/favicon.ico" rel="shortcut icon" type="image/x-icon" ?>
 <zk xmlns:w="client">
 	<borderlayout height="100%" width="100%">
-		<north border="none" autoscroll="true" vflex="5">
+		<north border="none">
 			<include src="/gui/banner.zul"/>
 		</north>
-		<center id="mainContent" autoscroll="true" hflex="1" vflex="9">
+		<center id="mainContent" autoscroll="true" >
 			 <include src="/gui/main.zul"/>
 		</center>
-		<south border="none" collapsible="true" vflex="1">
+		<south border="none" collapsible="true">
 			<include src="/gui/footer.zul"/>
 		</south>
 	</borderlayout>

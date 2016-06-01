@@ -1,19 +1,24 @@
-<div sclass="banner"  height="80%" apply="main.java.nl.tue.ieis.is.correlation.controller.BannerController" id="bannerWin">
-	<hbox hflex="5" vflex="1">
-		<hbox align="start" pack="start" hflex="4" vflex="1" style="float: left; text-align: center;">
-			<label value="Correlation Miner" sclass="banner-head"/>
-		</hbox>
-		<hbox pack="end" align="end" hflex="1" vflex="1" style="float: left;">
-			<vlayout>
-				<button id="initLoginBtn" label="Login" image="/imgs/login.png" sclass="myButton" style="width: 190px;"/>
-				<button id="initRegBtn" label="Register" image="/imgs/register.png" sclass="myButton"  style="width: 190px;"/>
-				<button id="logoutBtn" label="Logout"  image="/imgs/logout.png" visible="false" sclass="myButton"  style="width: 190px;"/>
-				<div id="userInfo" visible="false">
-					<label id="userLabel" context="adminPicRC" style="color:#c0c0c0; font-family:arial; font-size:14px; font-weight:bold;"/>
-				</div>
-			</vlayout>
-		</hbox>
-	</hbox>
+<div sclass="banner" apply="main.java.nl.tue.ieis.is.correlation.controller.BannerController" id="bannerWin">
+	<div sclass="top-banner">
+		<div sclass="headerText">
+			<vbox>
+				<label value="Correlation Mining" sclass="banner-head"/>
+			</vbox>
+		</div>
+		<div sclass="headerLoginArea">
+			<hbox>
+				<vlayout sclass="loginButtonArea">
+					<button 	id="initLoginBtn" 	label="Login" 		image="/imgs/login.png" 	sclass="myButton" 	style="width: 190px;"/>
+					<button 	id="initRegBtn" 	label="Register" 	image="/imgs/register.png" 	sclass="myButton"	style="width: 190px;"/>
+					<button 	id="logoutBtn" 		label="Logout"  	image="/imgs/logout.png" 	sclass="myButton"	style="width: 190px;"	visible="false"   />
+					<div id="userInfo" visible="false">
+						<label id="userLabel" context="adminPicRC" style="color:#c0c0c0; font-family:arial; font-size:14px; font-weight:bold;"/>
+					</div>
+				</vlayout>
+				<image id="userPic" src="/imgs/admin.png" sclass="userPic"/>
+			</hbox>
+		</div>
+	</div>
 	
 	<window id="loginWin" title="Login" width="450px" visible="false" closable="true" border="normal" apply="main.java.nl.tue.ieis.is.correlation.controller.UserController">
 		<caption image="/imgs/login.png" label="Login Form"/>
@@ -23,12 +28,12 @@
                 <column hflex="2" />
             </columns>
             <rows>
-                <row>Email<textbox id="username" constraint="no empty"/></row>
+                <row>Email<textbox id="email" constraint="no empty"/></row>
                 <row>Password <textbox id="password" constraint="no empty" type="password"/></row>
                 <row>
                 	<cell sclass="loginCtl" colspan="2">
                 		<vlayout>
-                    		<button id="loginBtn" label="Login" width="100px"/>
+                    		<button id="loginBtn" label="Login" width="100px" sclass="myButton"/>
                     		<label id="loginMsgLabel" />
                 		</vlayout>
                		</cell>
@@ -45,8 +50,8 @@
                 <column hflex="2" />
             </columns>
             <rows>
-            	<row>Description			<label> To the BPM Conference reviewer, due to privacy concerns you can register fake details. If your selected email address has not registered you will
-            	be immediately able to login.</label>	</row>
+            	<row>Description			<label> Due to privacy concerns you can register fake details. If your selected email address has not registered you will
+            	be able to login immediately.</label>	</row>
                 <row>Email 					<textbox id="regUsername" constraint=" /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*([,;]\s*\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)*/: Please enter real e-mail address"/></row>
                 <row>Password				<textbox id="regPassword" type="password" constraint="no empty"/></row>
                 <row>First Name				<textbox id="regFirstname" constraint="no empty"/></row>
@@ -54,7 +59,7 @@
                 <row>Institute				<textbox id="regInstitute" constraint="no empty"/></row>
                 
                 <row><cell sclass="regButton" colspan="2"><vlayout>
-                    <button id="regBtn" label="Register" width="100px"/>
+                    <button id="regBtn" label="Register" width="100px" sclass="myButton"/>
                     <label id="regMsgLabel" />
                 </vlayout></cell></row>
             </rows>

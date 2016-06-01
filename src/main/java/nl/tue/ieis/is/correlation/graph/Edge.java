@@ -1,6 +1,7 @@
 package main.java.nl.tue.ieis.is.correlation.graph;
 
 import org.jgrapht.graph.DefaultWeightedEdge;
+import org.joda.time.Duration;
 
 public class Edge extends DefaultWeightedEdge {
 
@@ -10,6 +11,8 @@ public class Edge extends DefaultWeightedEdge {
 	private Node dest;
 	private double occurance;
 	private double chance;
+	private Duration averageDuration;
+	private long standardDeviation;
 	
 	public Node getSource() {
 		return source;
@@ -43,12 +46,13 @@ public class Edge extends DefaultWeightedEdge {
 		this.chance = chance;
 	}
 
-	public Edge(Node source, Node dest, double occurance, double chance) {
+	public Edge(Node source, Node dest, double occurance, double chance, Duration avgDuration) {
 		super();
 		this.source = source;
 		this.dest = dest;
 		this.occurance = occurance;
 		this.chance = chance;
+		this.averageDuration = avgDuration;
 	}
 
 	@Override
@@ -67,4 +71,21 @@ public class Edge extends DefaultWeightedEdge {
 	public int hashCode() {
         return source.getActivityName().hashCode() ^ dest.getActivityName().hashCode();
     }
+
+	public Duration getAverageDuration() {
+		return averageDuration;
 	}
+
+	public void setAverageDuration(Duration averageDuration) {
+		this.averageDuration = averageDuration;
+	}
+
+	public long getStandardDeviation() {
+		return standardDeviation;
+	}
+
+	public void setStandardDeviation(long standardDeviation) {
+		this.standardDeviation = standardDeviation;
+	}
+	
+}

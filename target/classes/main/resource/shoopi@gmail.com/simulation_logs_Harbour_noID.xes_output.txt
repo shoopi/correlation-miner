@@ -1,0 +1,151 @@
+Number of Traces in the original log: 150
+A new log without case identifiers has been created -- Filename: simulation_logs_Harbour_noID.xes 
+ ================================= 
+
+
+===***=== Time mapping is set to **EQUAL_SIZE** method. ===***=== 
+# of events in the log: 1200
+**** Threshold is manually set to 1.0 of all values.
+Before P/S threshold we had 56 elements.
+After P/S threshold we have 56 elements. [Removed: 0]
+
+=================== Duration Matrix ===================
+
+
+ FINAL SELECTED EDGE LIST:
+Edge (Load onto Sea Vessel --> End) 		** Duration: PT0S 		** P/S Fraction: 0.49666666666666665 		** Edge-Ratio: 0.0
+Edge (End --> Load onto Sea Vessel) 		** Duration: PT0S 		** P/S Fraction: 0.49666666666666665 		** Edge-Ratio: 0.0
+Edge (Transport to Berth --> Load onto Sea Vessel) 		** Duration: PT20.466S 		** P/S Fraction: 0.5034666666666666 		** Edge-Ratio: 40650.15889830509
+Edge (Transport to Berth --> End) 		** Duration: PT20.466S 		** P/S Fraction: 0.5034666666666666 		** Edge-Ratio: 40650.15889830509
+Edge (Start --> Receive Pre-notification of arrival time) 		** Duration: PT171.040S 		** P/S Fraction: 0.5039555555555556 		** Edge-Ratio: 339395.00837816385
+Edge (Receive Pre-notification of arrival time --> Gate-in) 		** Duration: PT1787.788S 		** P/S Fraction: 0.5059111111111111 		** Edge-Ratio: 3533798.6471053325
+Edge (Start --> Gate-in) 		** Duration: PT1958.828S 		** P/S Fraction: 0.5063111111111112 		** Edge-Ratio: 3868822.8581460672
+Edge (Gate-in --> Internal Transport) 		** Duration: PT4316.276S 		** P/S Fraction: 0.5101777777777777 		** Edge-Ratio: 8460337.137381306
+Edge (Internal Storage --> Transport to Berth) 		** Duration: PT5504.336S 		** P/S Fraction: 0.5080444444444444 		** Edge-Ratio: 1.0834359198670283E7
+Edge (Internal Storage --> Load onto Sea Vessel) 		** Duration: PT5524.802S 		** P/S Fraction: 0.5081777777777777 		** Edge-Ratio: 1.087178983732727E7
+Edge (Internal Storage --> End) 		** Duration: PT5524.802S 		** P/S Fraction: 0.5081777777777777 		** Edge-Ratio: 1.087178983732727E7
+Edge (Internal Transport --> Internal Storage) 		** Duration: PT5604.033S 		** P/S Fraction: 0.5104444444444445 		** Edge-Ratio: 1.09787324771441E7
+Edge (Receive Pre-notification of arrival time --> Internal Transport) 		** Duration: PT6104.064S 		** P/S Fraction: 0.5122666666666666 		** Edge-Ratio: 1.1915793857365957E7
+Edge (Start --> Internal Transport) 		** Duration: PT6275.104S 		** P/S Fraction: 0.5128 		** Edge-Ratio: 1.2236942277691107E7
+Edge (Gate-in --> Internal Storage) 		** Duration: PT9920.309S 		** P/S Fraction: 0.5166666666666667 		** Edge-Ratio: 1.9200598064516127E7
+Edge (Internal Transport --> Transport to Berth) 		** Duration: PT11108.369S 		** P/S Fraction: 0.5143555555555556 		** Edge-Ratio: 2.1596673507301476E7
+Edge (Internal Transport --> Load onto Sea Vessel) 		** Duration: PT11128.835S 		** P/S Fraction: 0.5144444444444445 		** Edge-Ratio: 2.1632724622030236E7
+Edge (Internal Transport --> End) 		** Duration: PT11128.835S 		** P/S Fraction: 0.5144444444444445 		** Edge-Ratio: 2.1632724622030236E7
+Edge (Receive Pre-notification of arrival time --> Internal Storage) 		** Duration: PT11708.097S 		** P/S Fraction: 0.5186222222222222 		** Edge-Ratio: 2.257538627988688E7
+Edge (Start --> Internal Storage) 		** Duration: PT11879.137S 		** P/S Fraction: 0.5192888888888889 		** Edge-Ratio: 2.2875777345087297E7
+Edge (Gate-in --> Transport to Berth) 		** Duration: PT15424.645S 		** P/S Fraction: 0.5210222222222223 		** Edge-Ratio: 2.960458180499872E7
+Edge (Gate-in --> Load onto Sea Vessel) 		** Duration: PT15445.111S 		** P/S Fraction: 0.5210222222222223 		** Edge-Ratio: 2.9643862279280044E7
+Edge (Gate-in --> End) 		** Duration: PT15445.111S 		** P/S Fraction: 0.5210222222222223 		** Edge-Ratio: 2.9643862279280044E7
+Edge (Receive Pre-notification of arrival time --> Transport to Berth) 		** Duration: PT17212.433S 		** P/S Fraction: 0.5234222222222222 		** Edge-Ratio: 3.2884413899974525E7
+Edge (Receive Pre-notification of arrival time --> Load onto Sea Vessel) 		** Duration: PT17232.899S 		** P/S Fraction: 0.5234222222222222 		** Edge-Ratio: 3.2923514265092976E7
+Edge (Receive Pre-notification of arrival time --> End) 		** Duration: PT17232.899S 		** P/S Fraction: 0.5234222222222222 		** Edge-Ratio: 3.2923514265092976E7
+Edge (Start --> Transport to Berth) 		** Duration: PT17383.473S 		** P/S Fraction: 0.524 		** Edge-Ratio: 3.317456679389313E7
+Edge (Start --> Load onto Sea Vessel) 		** Duration: PT17403.939S 		** P/S Fraction: 0.5240444444444444 		** Edge-Ratio: 3.3210807183445003E7
+Edge (Start --> End) 		** Duration: PT17403.939S 		** P/S Fraction: 0.5240444444444444 		** Edge-Ratio: 3.3210807183445003E7
+======================================
+
+
+=================== Starting ILP ===================
+Optimal objective: 3.418727262757749E7
+SOLUTION 0
+1. Load onto Sea Vessel --> End: (150)
+2. Transport to Berth --> Load onto Sea Vessel: (150)
+3. Start --> Receive Pre-notification of arrival time: (150)
+4. Receive Pre-notification of arrival time --> Gate-in: (150)
+5. Gate-in --> Internal Transport: (150)
+6. Internal Storage --> Transport to Berth: (150)
+7. Internal Transport --> Internal Storage: (150)
+Objective Value: 3.418727262757749E7
+======================================
+
+*******************===Finding Cycles====*******************
+# of edges in the graph: 7
+
+ === Compare all ''possible edges'' with the original log === 
+Remaining size: 0
+
+ === Edges that are in the original log but not in the correlation miner model [FN]) ===
+[TP]: 7
+[FN]: 0
+
+ === Edges that are not in the original log but they are in the correlation miner model [FP]) ===
+[FP]: 0
+[EQUAL_SIZE] RECALL: 1.0
+[EQUAL_SIZE] PRECISION: 1.0
+********************************************************************************
+===***=== Time mapping is set to **GREEDY** method. ===***=== 
+
+=================== Duration Matrix ===================
+
+
+ FINAL SELECTED EDGE LIST:
+Edge (Load onto Sea Vessel --> End) 		** Duration: PT0S 		** P/S Fraction: 0.49666666666666665 		** Edge-Ratio: 0.0
+Edge (End --> Load onto Sea Vessel) 		** Duration: PT0S 		** P/S Fraction: 0.49666666666666665 		** Edge-Ratio: 0.0
+Edge (Transport to Berth --> Load onto Sea Vessel) 		** Duration: PT20.466S 		** P/S Fraction: 0.5034666666666666 		** Edge-Ratio: 40650.15889830509
+Edge (Transport to Berth --> End) 		** Duration: PT20.466S 		** P/S Fraction: 0.5034666666666666 		** Edge-Ratio: 40650.15889830509
+Edge (Start --> Receive Pre-notification of arrival time) 		** Duration: PT171.040S 		** P/S Fraction: 0.5039555555555556 		** Edge-Ratio: 339395.00837816385
+Edge (Receive Pre-notification of arrival time --> Gate-in) 		** Duration: PT1787.788S 		** P/S Fraction: 0.5059111111111111 		** Edge-Ratio: 3533798.6471053325
+Edge (Start --> Gate-in) 		** Duration: PT1958.828S 		** P/S Fraction: 0.5063111111111112 		** Edge-Ratio: 3868822.8581460672
+Edge (Gate-in --> Internal Transport) 		** Duration: PT4316.276S 		** P/S Fraction: 0.5101777777777777 		** Edge-Ratio: 8460337.137381306
+Edge (Internal Storage --> Transport to Berth) 		** Duration: PT5504.336S 		** P/S Fraction: 0.5080444444444444 		** Edge-Ratio: 1.0834359198670283E7
+Edge (Internal Storage --> Load onto Sea Vessel) 		** Duration: PT5524.802S 		** P/S Fraction: 0.5081777777777777 		** Edge-Ratio: 1.087178983732727E7
+Edge (Internal Storage --> End) 		** Duration: PT5524.802S 		** P/S Fraction: 0.5081777777777777 		** Edge-Ratio: 1.087178983732727E7
+Edge (Internal Transport --> Internal Storage) 		** Duration: PT5604.033S 		** P/S Fraction: 0.5104444444444445 		** Edge-Ratio: 1.09787324771441E7
+Edge (Receive Pre-notification of arrival time --> Internal Transport) 		** Duration: PT6104.064S 		** P/S Fraction: 0.5122666666666666 		** Edge-Ratio: 1.1915793857365957E7
+Edge (Start --> Internal Transport) 		** Duration: PT6275.104S 		** P/S Fraction: 0.5128 		** Edge-Ratio: 1.2236942277691107E7
+Edge (Gate-in --> Internal Storage) 		** Duration: PT9920.309S 		** P/S Fraction: 0.5166666666666667 		** Edge-Ratio: 1.9200598064516127E7
+Edge (Internal Transport --> Transport to Berth) 		** Duration: PT11108.369S 		** P/S Fraction: 0.5143555555555556 		** Edge-Ratio: 2.1596673507301476E7
+Edge (Internal Transport --> Load onto Sea Vessel) 		** Duration: PT11128.835S 		** P/S Fraction: 0.5144444444444445 		** Edge-Ratio: 2.1632724622030236E7
+Edge (Internal Transport --> End) 		** Duration: PT11128.835S 		** P/S Fraction: 0.5144444444444445 		** Edge-Ratio: 2.1632724622030236E7
+Edge (Receive Pre-notification of arrival time --> Internal Storage) 		** Duration: PT11708.097S 		** P/S Fraction: 0.5186222222222222 		** Edge-Ratio: 2.257538627988688E7
+Edge (Start --> Internal Storage) 		** Duration: PT11879.137S 		** P/S Fraction: 0.5192888888888889 		** Edge-Ratio: 2.2875777345087297E7
+Edge (Gate-in --> Transport to Berth) 		** Duration: PT15424.645S 		** P/S Fraction: 0.5210222222222223 		** Edge-Ratio: 2.960458180499872E7
+Edge (Gate-in --> Load onto Sea Vessel) 		** Duration: PT15445.111S 		** P/S Fraction: 0.5210222222222223 		** Edge-Ratio: 2.9643862279280044E7
+Edge (Gate-in --> End) 		** Duration: PT15445.111S 		** P/S Fraction: 0.5210222222222223 		** Edge-Ratio: 2.9643862279280044E7
+Edge (Receive Pre-notification of arrival time --> Transport to Berth) 		** Duration: PT17212.433S 		** P/S Fraction: 0.5234222222222222 		** Edge-Ratio: 3.2884413899974525E7
+Edge (Receive Pre-notification of arrival time --> Load onto Sea Vessel) 		** Duration: PT17232.899S 		** P/S Fraction: 0.5234222222222222 		** Edge-Ratio: 3.2923514265092976E7
+Edge (Receive Pre-notification of arrival time --> End) 		** Duration: PT17232.899S 		** P/S Fraction: 0.5234222222222222 		** Edge-Ratio: 3.2923514265092976E7
+Edge (Start --> Transport to Berth) 		** Duration: PT17383.473S 		** P/S Fraction: 0.524 		** Edge-Ratio: 3.317456679389313E7
+Edge (Start --> Load onto Sea Vessel) 		** Duration: PT17403.939S 		** P/S Fraction: 0.5240444444444444 		** Edge-Ratio: 3.3210807183445003E7
+Edge (Start --> End) 		** Duration: PT17403.939S 		** P/S Fraction: 0.5240444444444444 		** Edge-Ratio: 3.3210807183445003E7
+======================================
+
+
+=================== Starting ILP ===================
+Optimal objective: 3.418727262757749E7
+SOLUTION 0
+1. Load onto Sea Vessel --> End: (150)
+2. Transport to Berth --> Load onto Sea Vessel: (150)
+3. Start --> Receive Pre-notification of arrival time: (150)
+4. Receive Pre-notification of arrival time --> Gate-in: (150)
+5. Gate-in --> Internal Transport: (150)
+6. Internal Storage --> Transport to Berth: (150)
+7. Internal Transport --> Internal Storage: (150)
+Objective Value: 3.418727262757749E7
+======================================
+
+*******************===Finding Cycles====*******************
+# of edges in the graph: 7
+
+ === Compare all ''possible edges'' with the original log === 
+Remaining size: 0
+
+ === Edges that are in the original log but not in the correlation miner model [FN]) ===
+[TP]: 7
+[FN]: 0
+
+ === Edges that are not in the original log but they are in the correlation miner model [FP]) ===
+[FP]: 0
+RECALL: 1.0
+[GREEDY] RECALL: 1.0
+[GREEDY] PRECISION: 1.0
+********************************************************************************
+**[EQUAL_SIZE]** has been accepted as the final model.
+
+ ==================== RESULT ====================
+||.............................................||
+||.........FINAL RECALL: 1,00..................||
+||.............................................||
+||........FINAL PRECISION: 1,00................||
+||.............................................||
+=================================================

@@ -16,7 +16,6 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import main.java.nl.tue.ieis.is.correlation.evaluation.ApplicationFuzzyResult;
 import main.java.nl.tue.ieis.is.correlation.graph.GraphUtil;
 import main.java.nl.tue.ieis.is.correlation.graph.Edge;
 import main.java.nl.tue.ieis.is.correlation.graph.Node;
@@ -24,10 +23,12 @@ import main.java.nl.tue.ieis.is.correlation.helper.RealEdgeDurationComparer;
 import main.java.nl.tue.ieis.is.correlation.objects.EventObject;
 import main.java.nl.tue.ieis.is.correlation.objects.PossibleEdge;
 import main.java.nl.tue.ieis.is.correlation.objects.RealEdge;
+import main.java.nl.tue.ieis.is.correlation.objects.SimpleEventObject;
+import main.java.nl.tue.ieis.is.correlation.objects.SimpleTraceObject;
 import main.java.nl.tue.ieis.is.correlation.objects.TraceObject;
-import main.java.nl.tue.ieis.is.correlation.schema.xes_simple.Log;
-import main.java.nl.tue.ieis.is.correlation.schema.xes_simple.Log.Trace;
-import main.java.nl.tue.ieis.is.correlation.schema.xes_simple.Log.Trace.Event;
+import main.java.nl.tue.ieis.is.correlation.xes_simple.Log;
+import main.java.nl.tue.ieis.is.correlation.xes_simple.Log.Trace;
+import main.java.nl.tue.ieis.is.correlation.xes_simple.Log.Trace.Event;
 import main.java.nl.tue.ieis.is.correlation.milp.*;
 
 import org.joda.time.Duration;
@@ -41,6 +42,7 @@ public class AssessLog {
 	private static PrintWriter writer;
 	private static Set<RealEdge> edgeSet;
 	private static List<Node> nodes;
+	private static List<SimpleTraceObject> realTraces;
 	
 	public static void main(String[] args) throws JAXBException, FileNotFoundException, UnsupportedEncodingException {
 		String fileLocation = 	
@@ -89,9 +91,11 @@ public class AssessLog {
 			for(Trace trace : log.getTrace()) {
 				List<Event> eventList = trace.getEvent();
 				List<EventObject> events = new ArrayList<EventObject>();
+				List<SimpleEventObject> simpleEventObjects = new ArrayList<SimpleEventObject>();
+				
 				for(Event event : eventList) {
 					EventObject eventObject = new EventObject();
-					for(main.java.nl.tue.ieis.is.correlation.schema.xes_simple.Log.Trace.Event.String string : event.getString()) {
+					for(main.java.nl.tue.ieis.is.correlation.xes_simple.Log.Trace.Event.String string : event.getString()) {
 						if(string.getKey().contentEquals("concept:name")) {
 							eventObject.setActivity(string.getValue());
 						} else if (string.getKey().contentEquals("org:resource")) {
@@ -103,6 +107,7 @@ public class AssessLog {
 						}
 						DateTimeFormatter fmt = DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss'.'SSSZ");
 						eventObject.setTimestamp(fmt.parseDateTime(event.getDate().getValue()));
+						simpleEventObjects.add(new SimpleEventObject(eventObject.getActivity(), eventObject.getTimestamp()));
 					}
 					events.add(eventObject);
 					wholeLog.add(eventObject);
@@ -203,8 +208,8 @@ public class AssessLog {
 		}
 		return possibleEdges;
 	}
-
-
+	
+	/*
 	private static void checkCompleteness(Set<RealEdge> edgeSet, ApplicationFuzzyResult fuzzy) {
 		System.err.println("size fuzzy edge: " + fuzzy.getEdges().size() + " == size edge set: " + edgeSet.size());
 		for(Edge e : fuzzy.getEdges()) {
@@ -233,7 +238,8 @@ public class AssessLog {
 			}
 		}
 	}
-
+	*/
+	
 	private static Map<RealEdge, Integer> findEdgeOccurance(List<RealEdge> edges, Set<RealEdge> edgeSet) {
 		Map<RealEdge, Integer> realEdgeOccurance = new HashMap<RealEdge, Integer>();
 		for(RealEdge e1 : edgeSet) {
@@ -246,5 +252,38 @@ public class AssessLog {
 			realEdgeOccurance.put(e1, occurance);
 		}
 		return realEdgeOccurance;
+	}
+	
+	public static List<SimpleTraceObject> getAllTraces(String fileLocation) {
+		List<SimpleTraceObject> realTraces = new ArrayList<SimpleTraceObject>();
+		try {
+			File file = new File(fileLocation);			 
+			JAXBContext jaxbContext = JAXBContext.newInstance(Log.class);
+			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+			Log log = (Log) jaxbUnmarshaller.unmarshal(file);
+			for(Trace trace : log.getTrace()) {
+				List<Event> eventList = trace.getEvent();
+				List<SimpleEventObject> simpleEventObjects = new ArrayList<SimpleEventObject>();
+				
+				for(Event event : eventList) {
+					EventObject eventObject = new EventObject();
+					for(main.java.nl.tue.ieis.is.correlation.xes_simple.Log.Trace.Event.String string : event.getString()) {
+						if(string.getKey().contentEquals("concept:name")) {
+							eventObject.setActivity(string.getValue());
+							break;
+						}
+					}
+					DateTimeFormatter fmt = DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss'.'SSSZ");
+					eventObject.setTimestamp(fmt.parseDateTime(event.getDate().getValue()));
+					simpleEventObjects.add(new SimpleEventObject(eventObject.getActivity(), eventObject.getTimestamp()));
+				}
+				realTraces.add(new SimpleTraceObject(simpleEventObjects));
+			}
+			return realTraces;
+		 } catch(Exception e) {
+				System.out.println(e.getMessage());
+				e.printStackTrace();
+				return null;
+		}
 	}
 }

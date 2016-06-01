@@ -1,0 +1,47 @@
+===***=== Time mapping is set to **EQUAL_SIZE** method. ===***=== 
+# of events in the log: 10
+**** Threshold is manually set to 1.0 of all values.
+Before P/S threshold we had 56 elements.
+After P/S threshold we have 56 elements. [Removed: 0]
+
+=================== Duration Matrix ===================
+
+
+ FINAL SELECTED EDGE LIST:
+Edge (Depart from warehouse --> Send Pre-notification of Arrival time to Harbor) 		** Duration: PT158.941S 		** P/S Fraction: 1.0 		** Edge-Ratio: 158941.0
+Edge (Cargo check --> Depart from warehouse) 		** Duration: PT289.082S 		** P/S Fraction: 1.0 		** Edge-Ratio: 289082.0
+Edge (Cargo check --> Send Pre-notification of Arrival time to Harbor) 		** Duration: PT448.023S 		** P/S Fraction: 1.0 		** Edge-Ratio: 448023.0
+Edge (Loading Cargo --> Cargo check) 		** Duration: PT530.920S 		** P/S Fraction: 1.0 		** Edge-Ratio: 530920.0
+Edge (Loading Cargo --> Depart from warehouse) 		** Duration: PT820.002S 		** P/S Fraction: 1.0 		** Edge-Ratio: 820002.0
+Edge (Loading Cargo --> Send Pre-notification of Arrival time to Harbor) 		** Duration: PT978.943S 		** P/S Fraction: 1.0 		** Edge-Ratio: 978943.0
+Edge (Arrival of Cargo at Harbour --> End) 		** Duration: PT1159.107S 		** P/S Fraction: 1.0 		** Edge-Ratio: 1159107.0
+Edge (Arrival of Cargo at Harbour --> Unload Cargo) 		** Duration: PT1159.107S 		** P/S Fraction: 1.0 		** Edge-Ratio: 1159107.0
+Edge (Send Pre-notification of Arrival time to Harbor --> Arrival of Cargo at Harbour) 		** Duration: PT1309.186S 		** P/S Fraction: 1.0 		** Edge-Ratio: 1309186.0
+Edge (Depart from warehouse --> Arrival of Cargo at Harbour) 		** Duration: PT1468.127S 		** P/S Fraction: 1.0 		** Edge-Ratio: 1468127.0
+Edge (Cargo check --> Arrival of Cargo at Harbour) 		** Duration: PT1757.209S 		** P/S Fraction: 1.0 		** Edge-Ratio: 1757209.0
+Edge (Start --> Loading Cargo) 		** Duration: PT2025.739S 		** P/S Fraction: 1.0 		** Edge-Ratio: 2025739.0
+Edge (Loading Cargo --> Arrival of Cargo at Harbour) 		** Duration: PT2288.129S 		** P/S Fraction: 1.0 		** Edge-Ratio: 2288129.0
+Edge (Send Pre-notification of Arrival time to Harbor --> End) 		** Duration: PT2468.293S 		** P/S Fraction: 1.0 		** Edge-Ratio: 2468293.0
+Edge (Send Pre-notification of Arrival time to Harbor --> Unload Cargo) 		** Duration: PT2468.293S 		** P/S Fraction: 1.0 		** Edge-Ratio: 2468293.0
+Edge (Start --> Cargo check) 		** Duration: PT2556.659S 		** P/S Fraction: 1.0 		** Edge-Ratio: 2556659.0
+Edge (Depart from warehouse --> End) 		** Duration: PT2627.234S 		** P/S Fraction: 1.0 		** Edge-Ratio: 2627234.0
+Edge (Depart from warehouse --> Unload Cargo) 		** Duration: PT2627.234S 		** P/S Fraction: 1.0 		** Edge-Ratio: 2627234.0
+Edge (Start --> Depart from warehouse) 		** Duration: PT2845.741S 		** P/S Fraction: 1.0 		** Edge-Ratio: 2845741.0
+Edge (Cargo check --> End) 		** Duration: PT2916.316S 		** P/S Fraction: 1.0 		** Edge-Ratio: 2916316.0
+Edge (Cargo check --> Unload Cargo) 		** Duration: PT2916.316S 		** P/S Fraction: 1.0 		** Edge-Ratio: 2916316.0
+Edge (Start --> Send Pre-notification of Arrival time to Harbor) 		** Duration: PT3004.682S 		** P/S Fraction: 1.0 		** Edge-Ratio: 3004682.0
+Edge (Loading Cargo --> End) 		** Duration: PT3447.236S 		** P/S Fraction: 1.0 		** Edge-Ratio: 3447236.0
+Edge (Loading Cargo --> Unload Cargo) 		** Duration: PT3447.236S 		** P/S Fraction: 1.0 		** Edge-Ratio: 3447236.0
+Edge (Start --> Arrival of Cargo at Harbour) 		** Duration: PT4313.868S 		** P/S Fraction: 1.0 		** Edge-Ratio: 4313868.0
+Edge (Start --> End) 		** Duration: PT5472.975S 		** P/S Fraction: 1.0 		** Edge-Ratio: 5472975.0
+Edge (Start --> Unload Cargo) 		** Duration: PT5472.975S 		** P/S Fraction: 1.0 		** Edge-Ratio: 5472975.0
+Edge (End --> Unload Cargo) 		** Duration: PT0S 		** P/S Fraction: 0.0 		** Edge-Ratio: NaN
+Edge (Unload Cargo --> End) 		** Duration: PT0S 		** P/S Fraction: 0.0 		** Edge-Ratio: NaN
+======================================
+
+
+=================== Starting ILP ===================
+Error code: 10003. Element 27 of a double array is Nan.
+
+*******************===Finding Cycles====*******************
+# of edges in the graph: 0

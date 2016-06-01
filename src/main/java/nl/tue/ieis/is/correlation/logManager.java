@@ -2,8 +2,11 @@ package main.java.nl.tue.ieis.is.correlation;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -19,6 +22,7 @@ import main.java.nl.tue.ieis.is.correlation.duration.DurationManager;
 import main.java.nl.tue.ieis.is.correlation.graph.Edge;
 import main.java.nl.tue.ieis.is.correlation.graph.GraphUtil;
 import main.java.nl.tue.ieis.is.correlation.graph.Node;
+import main.java.nl.tue.ieis.is.correlation.graph.TraceGraph;
 import main.java.nl.tue.ieis.is.correlation.helper.EdgeDurationComparer;
 import main.java.nl.tue.ieis.is.correlation.helper.EdgeHeuristicComparer;
 import main.java.nl.tue.ieis.is.correlation.helper.EdgeHeuristicStandardDeviationComparer;
@@ -27,15 +31,21 @@ import main.java.nl.tue.ieis.is.correlation.helper.FollowProbabilityComparer;
 import main.java.nl.tue.ieis.is.correlation.objects.ActivityTimeArray;
 import main.java.nl.tue.ieis.is.correlation.objects.EventObject;
 import main.java.nl.tue.ieis.is.correlation.objects.PossibleEdge;
+import main.java.nl.tue.ieis.is.correlation.objects.PossibleRelation;
+import main.java.nl.tue.ieis.is.correlation.objects.RealEdge;
+import main.java.nl.tue.ieis.is.correlation.objects.SimpleEventObject;
+import main.java.nl.tue.ieis.is.correlation.objects.SimpleTraceObject;
 import main.java.nl.tue.ieis.is.correlation.objects.WeaklyFollowProb;
-import main.java.nl.tue.ieis.is.correlation.schema.xes_simple.Log;
-import main.java.nl.tue.ieis.is.correlation.schema.xes_simple.Log.Trace;
-import main.java.nl.tue.ieis.is.correlation.schema.xes_simple.Log.Trace.Event;
+import main.java.nl.tue.ieis.is.correlation.xes_simple.Log;
+import main.java.nl.tue.ieis.is.correlation.xes_simple.Log.Trace;
+import main.java.nl.tue.ieis.is.correlation.xes_simple.Log.Trace.Event;
 import main.java.nl.tue.ieis.is.correlation.learner.AssessLog;
 import main.java.nl.tue.ieis.is.correlation.milp.*;
 import main.java.nl.tue.ieis.is.correlation.config.ProjectConfig;
 
+import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import org.jgrapht.alg.cycle.JohnsonSimpleCycles;
+import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
 import org.joda.time.format.DateTimeFormat;
@@ -52,12 +62,26 @@ public class logManager {
 	
 	private boolean isStdDeviationEnabled = false;
 	private double psThreshold = 0.8;
+	
 	private boolean isDataProducer = true;
 	private boolean isGreedyTimeMapping = true;
+	private boolean isTraceLogProducer = false;
+	private PrintWriter writer;
+	
+	public logManager() {
+		try {
+			writer = new PrintWriter(ProjectConfig.desktopPath + "Real_Time_Diff.txt");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+
 	private BufferedImage correlationImage;
 	
 	private double recall_greedy = 0.0, recall_equal = 0.0, precision_greedy = 0.0, precision_equal = 0.0;	
-			
+	private double recall_relation = 0.0, recall_log= 0.0, precision_relation= 0.0, precision_log= 0.0;			
 	
 	public String getStartActivity() {
 		return startActivity;
@@ -122,6 +146,14 @@ public class logManager {
 	public void setCorrelationImage(BufferedImage correlationImage) {
 		this.correlationImage = correlationImage;
 	}
+	
+	public boolean isTraceLogProducer() {
+		return isTraceLogProducer;
+	}
+
+	public void setTraceLogProducer(boolean isTraceLogProducer) {
+		this.isTraceLogProducer = isTraceLogProducer;
+	}
 
 	public JApplet run(String username, String filename) {
 		
@@ -138,12 +170,18 @@ public class logManager {
 		Cloner cloner = new Cloner();
 
 		Map<PossibleEdge, Integer> milpEdgeList = runMILP(sortedDurationList);
-
+		
 		JApplet applet = null;
 		if(!isDataProducer) {
 			GraphUtil graphUtil = new GraphUtil(nodes, milpEdgeList);
 			applet = graphUtil.draw("MILP");		
-			correlationImage = graphUtil.generatePicture(ProjectConfig.xesFilePath + "/" + username + "/" + ProjectConfig.fileNameWithNoID(filename) + ".png" );		
+			correlationImage = graphUtil.generatePicture(ProjectConfig.xesFilePath + "/" + username + "/" + ProjectConfig.fileNameWithNoID(filename) + ".png" );
+			
+			
+			//if(!isGraphOnly) 
+			//	createTraceSet(graphUtil.getGraph(), activityTimeList, average);
+			
+			
 		} else {
 			Map<PossibleEdge, Integer> clone1 = cloner.deepClone(milpEdgeList);
 			compareWholePossibleEdge(sortedDurationList, ProjectConfig.xesFilePath + "/" + username + "/" + filename);
@@ -161,30 +199,48 @@ public class logManager {
 			double roundedRecall = 0.0;
 			double roundedPrecision = 0.0;
 			
+			GraphUtil graphUtil;
 			if(equalSizeExperiment >= greedyExperiment ) {
 				System.out.println("**[EQUAL_SIZE]** has been accepted as the final model.");
-				GraphUtil graphUtil = new GraphUtil(nodes, clone1);
+				 graphUtil = new GraphUtil(nodes, clone1);
 				applet = graphUtil.draw("MILP");		
 				correlationImage = graphUtil.generatePicture(ProjectConfig.xesFilePath + "/" + username + "/" + ProjectConfig.fileNameWithNoID(filename) + ".png" );
 				roundedRecall = (double) Math.round(recall_equal * 100) / 100;
 				roundedPrecision = (double) Math.round(precision_equal * 100) / 100;
+				if(isTraceLogProducer)
+					evaluateGeneratedTraces(username, filename, activityTimeList, graphUtil);
+				
 			} else {
 				System.out.println("**[GREEDY]** has been accepted as the final model.");
-				GraphUtil graphUtil = new GraphUtil(nodes, clone2);
+				 graphUtil = new GraphUtil(nodes, clone2);
 				applet = graphUtil.draw("MILP");	
 				correlationImage = graphUtil.generatePicture(ProjectConfig.xesFilePath + "/" + username + "/" + ProjectConfig.fileNameWithNoID(filename) + ".png" );
 				roundedRecall = (double) Math.round(recall_greedy * 100) / 100;
 				roundedPrecision = (double) Math.round(precision_greedy * 100) / 100;
+				if(isTraceLogProducer)
+					evaluateGeneratedTraces(username, filename, activityTimeList, graphUtil);
+				
 			}
-			System.out.println("\n ==================== RESULT ====================");
+			System.out.println("\n ================= GRAPH RESULT =================");
 			System.out.println("||.............................................||");
 			System.out.println("||.........FINAL RECALL: " + String.format("%.2f", roundedRecall) + "..................||");
 			System.out.println("||.............................................||");
 			System.out.println("||........FINAL PRECISION: " + String.format("%.2f", roundedPrecision) + "................||");
 			System.out.println("||.............................................||");
 			System.out.println("=================================================");
+			
+			showRealTimeDifferences(username, filename, sortedDurationList);
+			
 		} 
 		return applet;
+	}
+
+
+	private void evaluateGeneratedTraces(String username, String filename,
+		List<ActivityTimeArray> activityTimeList, GraphUtil graphUtil) {
+		List<SimpleTraceObject> traces = createTraceSet(graphUtil.getGraph(), activityTimeList);
+		DataProducrer.produceGeneratedTraceLog(username, filename, traces);
+		doTraceEvaluation(traces, filename, username, isTraceLogProducer);
 	}
 
 	private List<ActivityTimeArray> loadLogFile(String fileLocation) {
@@ -203,7 +259,7 @@ public class logManager {
 					
 			for(Event event : eventList) {
 				EventObject eventObject = new EventObject();
-				for(main.java.nl.tue.ieis.is.correlation.schema.xes_simple.Log.Trace.Event.String string : event.getString()) {
+				for(main.java.nl.tue.ieis.is.correlation.xes_simple.Log.Trace.Event.String string : event.getString()) {
 					if(string.getKey().contentEquals("concept:name")) {
 						eventObject.setActivity(string.getValue());
 					} else if (string.getKey().contentEquals("org:resource")) {
@@ -503,5 +559,213 @@ public class logManager {
 			result = recall * precision;
 		
 		return result;
+	}
+	
+	private void doTraceEvaluation (List<SimpleTraceObject> minedTraces, String realFile, String username, boolean isTraceLogProducer) {
+		
+		List<SimpleTraceObject> realTraces = AssessLog.getAllTraces(ProjectConfig.xesFilePath + "/" + username + "/" +realFile);
+		
+		int tp_trace = 0, tp_relation = 0;
+		int fp_trace = 0, fp_relation = 0;
+		int fn_trace = 0, fn_relation = 0;
+		
+		
+		System.out.println("\n === Relations that are in the original log but not in the correlation miner Log [FN]) ===");
+		System.out.println("\n === Relations that are not in the original log but they are in the correlation miner Log [FP]) ===");
+
+		Set<PossibleRelation> realRelations = new HashSet<PossibleRelation>();
+		Set<PossibleRelation> minedRelations = new HashSet<PossibleRelation>();
+		
+		for(SimpleTraceObject trace : realTraces) {
+			for(int i = 0; i < trace.getEvents().size() - i; i++) {
+				realRelations.add(new PossibleRelation(trace.getEvents().get(i), trace.getEvents().get(i+1)));
+			}
+		}
+		
+		for(SimpleTraceObject trace : minedTraces) {
+			for(int i = 0; i < trace.getEvents().size() - i; i++) {
+				minedRelations.add(new PossibleRelation(trace.getEvents().get(i), trace.getEvents().get(i+1)));
+			}
+		}
+		
+		Set<PossibleRelation> intersection = new HashSet<PossibleRelation>(realRelations); 
+		intersection.retainAll(minedRelations);
+		
+		tp_relation = intersection.size();
+		fn_relation = realRelations.size() - intersection.size();
+		fp_relation = minedRelations.size() - intersection.size();
+		
+		System.out.println("TP Relation: " + tp_relation );
+		System.out.println("FP Relation: " + fp_relation );
+		System.out.println("FN Relation: " + fn_relation );
+		System.out.println("TP Trace: " + tp_trace);
+		System.out.println("FP Trace: " + fp_trace );
+		System.out.println("FN Trace: " + fn_trace );
+	}
+	
+	private void showRealTimeDifferences(String username, String realFile, List<PossibleEdge> edges) {
+		Set<PossibleRelation> realRelations = new HashSet<>();
+		List<SimpleTraceObject> realTraces = AssessLog.getAllTraces(ProjectConfig.xesFilePath + "/" + username + "/" +realFile);
+		for(SimpleTraceObject trace : realTraces) {
+			for(int i = 0; i < trace.getEvents().size() - i; i++) {
+				realRelations.add(new PossibleRelation(trace.getEvents().get(i), trace.getEvents().get(i+1)));
+			}
+		}
+		writer.println("\n============= \nInvestigate Real Log");
+		Map<RealEdge, List<Long>> edgeToDuration = new HashMap<RealEdge, List<Long>>();
+		for(PossibleRelation r1 : realRelations) {
+			RealEdge r = new RealEdge(r1.getSource().getActivity(), r1.getDest().getActivity(), new Duration(0));
+			if(edgeToDuration.containsKey(r)) {
+				edgeToDuration.get(r).add(new Duration(r1.getSource().getTimestamp(), r1.getDest().getTimestamp()).getMillis());
+			} else {
+				List<Long> durations = new ArrayList<Long>();
+				durations.add(new Duration(r1.getSource().getTimestamp(), r1.getDest().getTimestamp()).getMillis());
+				edgeToDuration.put(r, durations);
+			}
+		}
+		
+		DescriptiveStatistics statAllAvgReal = new DescriptiveStatistics();
+		DescriptiveStatistics statAllAvgMined = new DescriptiveStatistics();
+		
+		for(Map.Entry<RealEdge, List<Long>> entry : edgeToDuration.entrySet()) {
+			String value = "[" + entry.getKey().getActivity1() + "-->" + entry.getKey().getActivity2() + "] = {";
+			DescriptiveStatistics stats = new DescriptiveStatistics();
+			for (int i = 0 ; i < entry.getValue().size(); i++) {
+				value = value + entry.getValue().get(i) + ", ";
+				stats.addValue(Long.valueOf(entry.getValue().get(i)).doubleValue());
+			}
+			value = value + "}";
+			
+			long minedAverageDuration = 0;
+			for(PossibleEdge e : edges) 
+				if(e.getActivity1().contentEquals(entry.getKey().getActivity1()) && 
+						e.getActivity2().contentEquals(entry.getKey().getActivity2())) {
+					minedAverageDuration = e.getDuration().getMillis();
+					//statAllAvgMined.addValue(e.getDuration().getMillis());
+				}
+			
+			double mean = stats.getMean();
+			for(int i = 0; i < entry.getValue().size(); i++) {
+				statAllAvgReal.addValue(mean);
+				statAllAvgMined.addValue(minedAverageDuration);
+			}
+			/*
+			writer.println(value + "\n");
+			writer.println(entry.getKey().getActivity1() + "-->" + entry.getKey().getActivity2());
+			writer.println("Actual Mean: " + mean);
+			writer.println("Mined  Mean: " + minedAverageDuration);
+			writer.println("Delta = " + (mean - minedAverageDuration));
+			writer.println("=====================\n");
+			
+			System.out.println(entry.getKey().getActivity1() + "-->" + entry.getKey().getActivity2());
+			System.out.println("Actual Mean: " + mean);
+			System.out.println("Mined  Mean: " + minedAverageDuration);
+			System.out.println("Delta = " + (mean - minedAverageDuration));
+			System.out.println("Ratio: "  + (double) ((double)minedAverageDuration / (double)mean));
+			//System.out.println("Actual Ration: " + (double) ((double)mean / (double)statAllAvgReal.getMean()));
+			//System.out.println("Mined Ration: " + (double) ((double)minedAverageDuration / (double) statAllAvgMined.getMean()));
+			System.out.println("=====================\n");
+			*/
+		}
+		/*
+		System.out.println("Aggregated Actual Mean: " + statAllAvgReal.getMean());
+		System.out.println("Mined  Mean: " + statAllAvgMined.getMean());
+		System.out.println("Delta = " + ( statAllAvgReal.getMean() - statAllAvgMined.getMean()));
+		System.out.println("Ratio: "  + (double) ((double)statAllAvgMined.getMean() / (double)statAllAvgReal.getMean()));
+		*/
+		writer.close();
+	}
+	
+	public void doTraceEvaluationAppRunner (Set<PossibleRelation> minedRelations, String realFile, String username, boolean isTraceLogProducer) {
+		
+		List<SimpleTraceObject> realTraces = AssessLog.getAllTraces(ProjectConfig.xesFilePath + "/" + username + "/" +realFile);
+		
+		int tp_trace = 0, tp_relation = 0;
+		int fp_trace = 0, fp_relation = 0;
+		int fn_trace = 0, fn_relation = 0;
+		
+		System.out.println("Relations that are both in the original log and they are in the correlation miner Log [TP]");
+		System.out.println("Relations that are in the original log but not in the correlation miner Log [FN]");
+		System.out.println("Relations that are not in the original log but they are in the correlation miner Log [FP]");
+
+		Set<PossibleRelation> realRelations = new HashSet<PossibleRelation>();
+		
+		for(SimpleTraceObject trace : realTraces) {
+			for(int i = 0; i < trace.getEvents().size() - i; i++) {
+				realRelations.add(new PossibleRelation(trace.getEvents().get(i), trace.getEvents().get(i+1)));
+			}
+		}
+
+		
+		Set<PossibleRelation> intersection = new HashSet<PossibleRelation>(realRelations); 
+		intersection.retainAll(minedRelations);
+		
+		tp_relation = intersection.size();
+		fn_relation = realRelations.size() - intersection.size();
+		fp_relation = minedRelations.size() - intersection.size();
+		
+		System.out.println("TP Relation: " + tp_relation );
+		System.out.println("FP Relation: " + fp_relation );
+		System.out.println("FN Relation: " + fn_relation );
+		//System.out.println("TP Trace: " + tp_trace);
+		//System.out.println("FP Trace: " + fp_trace );
+		//System.out.println("FN Trace: " + fn_trace );
+	
+	}
+	
+	public List<SimpleTraceObject> createTraceSet(SimpleDirectedWeightedGraph<Node,Edge> graph, List<ActivityTimeArray> activityTimeList) {
+		
+		Map<Edge, List<PossibleRelation>> allPossibleRelations2Edges = new HashMap<Edge, List<PossibleRelation>>();		
+		List<PossibleRelation> allPossibleRelaions = new ArrayList<PossibleRelation>();
+		for(Edge e : graph.edgeSet()) {
+			
+			ActivityTimeArray startActTime = null;
+			ActivityTimeArray endActTime = null;
+			
+			for(ActivityTimeArray at : activityTimeList) {
+				if(at.getActivity().contentEquals(e.getSource().getActivityName())) {
+					startActTime = at;
+				} else if (at.getActivity().contentEquals(e.getDest().getActivityName())) {
+					endActTime = at;
+				}
+			}
+			List<PossibleRelation> allEdgeRelation = new ArrayList<PossibleRelation>();
+			for(int i = 1; i < startActTime.getTimestamps().size() + 1; i++) {
+				for (int j = 1; j < endActTime.getTimestamps().size() + 1; j++) {
+					if(startActTime.getTimestamps().get(i-1).isBefore(endActTime.getTimestamps().get(j-1)) ||
+							startActTime.getTimestamps().get(i-1).isEqual(endActTime.getTimestamps().get(j-1))
+							) {
+						allEdgeRelation.add(new PossibleRelation(
+								new SimpleEventObject(startActTime.getActivity(), startActTime.getTimestamps().get(i-1)), 
+								new SimpleEventObject(endActTime.getActivity(), endActTime.getTimestamps().get(j-1))));
+					}
+				}
+			}
+			allPossibleRelaions.addAll(allEdgeRelation);
+			allPossibleRelations2Edges.put(e, allEdgeRelation);
+		}
+		
+		TraceCalculator traceMilp = new TraceCalculator(allPossibleRelaions, activityTimeList, graph.edgeSet());
+		List<PossibleRelation> finalRelations = traceMilp.calculate();
+		TraceGraph traceGraph = new TraceGraph(finalRelations, startActivity, endActivity);
+		List<SimpleTraceObject> traces = traceGraph.createTraces();
+		
+		Collections.sort(traces, new Comparator<SimpleTraceObject>() {
+	        public int compare(SimpleTraceObject o1, SimpleTraceObject o2) {
+	            return o1.getEvents().get(0).getTimestamp().compareTo(o2.getEvents().get(0).getTimestamp());
+	        }
+	    });
+		
+		System.out.println("\n\n -===TRACES===- \n\n");
+		int traceCounter = 1;
+		for(SimpleTraceObject tr : traces) {
+			System.out.println("[Trace " + traceCounter + "] ");
+			for(SimpleEventObject event : tr.getEvents()) {
+				System.out.println(event.toString() + " --> ");
+			}
+			traceCounter++;
+			System.out.println("\n\n ------ \n\n");
+		}
+		return traces;
 	}
 }

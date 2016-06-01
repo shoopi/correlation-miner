@@ -1,0 +1,1 @@
+Number of Traces in the original log: 10000

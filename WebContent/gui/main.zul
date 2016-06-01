@@ -1,54 +1,79 @@
 <div id="mainDiv" apply="main.java.nl.tue.ieis.is.correlation.controller.MainController" height="100%" width="100%"  >	
-	<vbox spacing="15px"  id="mainHbox" height="90%" width="90%" style="padding: 10px; margin-left: auto; margin-right: auto;">
-		<groupbox mold="3d" id="uploadGroupbox" hflex="1" vflex="1" contentStyle="overflow:auto" height="100%" >
+	<vbox id="mainHbox" style="padding: 10px; margin-left: auto; margin-right: auto;">
+		<groupbox mold="3d" id="uploadGroupbox" contentStyle="overflow:auto" height="100%" width="100%">
 			<attribute name="onClick">
 				<![CDATA[arrow.setSclass("open-" + self.isOpen());]]>
 			</attribute>
-			<caption label="Upload Event Log (XES)"  height="16%" hflex="1" vflex="1" width="100%" sclass="customIcon">
+			<caption label="Event Log (XES) Manager"  hflex="1" vflex="1" width="100%" sclass="customIcon">
 				<span id="arrow" class="open-true"/>
 			</caption>
 			<hbox spacing="20px">
-				<vbox>
-					<groupbox>
-						<caption label="With Case Identifier"/>
-						<vlayout>
-							<button upload="true,maxsize=-1" label="Upload Event Log with Case Identifier" id="uploadIDBtn"  image="/imgs/upload.gif"/>
-							<button label="Download Log without Case Identifier" id="downloadLogBtn"  image="/imgs/disk.png" disabled="true"/>
-						</vlayout>
-					</groupbox>
-					<groupbox >
-						<caption label="Without Case Identifier"/>
-						<button upload="true,maxsize=-1" label="Upload Event Log without Case Identifier" id="uploadNoIDBtn" image="/imgs/upload.gif"/>
-					</groupbox>
-				</vbox>
-				<groupbox height="98%">
-					<caption label="Sample Event Log"/>
-					<hbox align="center" pack="center">
-						<vbox spacing="15px">
-							<button Label="Download Sample Log" id="downloadSampleLogBtn"  image="/imgs/disk.png" disabled="true"/>
-							<button Label="Run Correlation Miner" id="runSampleLogBtn"  image="/imgs/icon_run.png" disabled="true"/>							
-						</vbox>
-						<vbox spacing="10px">
-							<radiogroup id="sampleLogRadio" />
-							<hbox spacing="10px" align="center" pack="center">
-								<radio id="r1" label="3Branch Uniform (0-100]	2000Cases" 						radiogroup="sampleLogRadio" value="2" style="font-size: 0.85em;"/>
-								<radio id="r2" label="4Branch Uniform (0-100] Same Inter-Arrival 1000Cases" 	radiogroup="sampleLogRadio" value="8" style="font-size: 0.85em;"/>							
-								<radio id="r3" label="4Branch Uniform (0-100] Higher Inter-Arrival 1000Cases" 	radiogroup="sampleLogRadio" value="7" style="font-size: 0.85em;"/>	
-								<radio id="r4" label="Paper Example" 											radiogroup="sampleLogRadio" value="6" style="font-size: 0.90em;"/>						
-							</hbox>
-							<hbox  spacing="10px" align="center" pack="center">
-								<radio id="r5" label="3Branch Expo   (0-100] 2000Cases" 						radiogroup="sampleLogRadio" value="1" style="font-size: 0.85em;"/>
-								<radio id="r6" label="4Branch Expo   (0-100] Same Inter-Arrival 1000Cases" 		radiogroup="sampleLogRadio" value="5" style="font-size: 0.85em;"/>	
-								<radio id="r7" label="4Branch Expo   (0-100] Higher Inter-Arrival 1000Cases" 	radiogroup="sampleLogRadio" value="4" style="font-size: 0.85em;"/>													
-								<radio id="r8" label="BPI Challenage 2012 [modified]" 							radiogroup="sampleLogRadio" value="3" style="font-size: 0.85em;"/>
-							</hbox>
-						</vbox>
+				<groupbox closable="false" width="350px">
+					<caption label="Event Log Manager"/>
+					<vlayout>
+						<button upload="true,maxsize=-1" label="Upload Log with Case ID" id="uploadIDBtn"  image="/imgs/upload.gif" width="330px"/>
+						<button label="Download Log without Case IDs" id="downloadLogBtn"  image="/imgs/disk.png" disabled="true" width="330px"/>
+						<hbox>
+						<label style="color:#888888; font-weight:bold; "> Generate Log? </label>
+						<combobox id="generatedLogCombo" autocomplete="true" constraint="no empty" readonly="true" width="100px">
+							<comboitem label="True" id="trueGenerateLog" sclass="myCombobox"/>
+							<comboitem label="False" id="falseGenerateLog" sclass="myCombobox"/>
+						</combobox>
+						<label style="color:#888888; font-weight:bold;"> Value </label>
+						<doublebox id="logThresholdDoublebox" constraint="no empty" value="1"/>
 					</hbox>
+					</vlayout>
+				</groupbox>
+				
+				<groupbox closable="false" width="300px">
+					<caption label="Discovery"/>
+					<vlayout>
+						<button upload="true,maxsize=-1" label="Upload Log without Case ID" id="uploadNoIDBtn" image="/imgs/upload.gif" width="280px"/>	
+						<button label="Download Generated Log with Case IDs" id="downloadGenLogBtn"  image="/imgs/disk.png" disabled="true" width="280px"/>
+						<button label="Download Console" id="downloadConsoleBtn"  image="/imgs/disk.png" disabled="true" width="280px"/>
+					</vlayout>
+				</groupbox>
+
+				<groupbox closable="false" width="930px">
+					<caption label="Sample Event Log Manager"/>
+						<hlayout>
+							<vlayout>
+								<button Label="Download Sample Log" id="downloadSampleLogBtn"  image="/imgs/disk.png" disabled="true" width="280px"/>
+								<button Label="Run Correlation Miner" id="runSampleLogBtn"  image="/imgs/icon_run.png" disabled="true" width="280px"/>
+							</vlayout>
+						
+							<radiogroup id="sampleLogRadio" />
+							<grid>
+								<columns>
+									<column width="200px"/>
+									<column width="220px"/>
+									<column width="200px"/>
+								</columns>
+								<rows>
+									<row>
+										<radio id="r1" label="3Branch Uni(0-100] 2000Cases" 			radiogroup="sampleLogRadio" value="2" style="font-size: 0.85em;"/>
+										<radio id="r2" label="4Branch Uni(0-100] EQ-Arrival 1000Cases" 	radiogroup="sampleLogRadio" value="8" style="font-size: 0.85em;"/>							
+										<radio id="r3" label="4Branch Uni(0-100] HI-Arrival 1000Cases" 	radiogroup="sampleLogRadio" value="7" style="font-size: 0.85em;"/>	
+									</row>
+									<row>
+										<radio id="r5" label="3Branch Expo(0-100] 2000Cases" 				radiogroup="sampleLogRadio" value="1" style="font-size: 0.85em;"/>
+										<radio id="r6" label="4Branch Expo(0-100] EQ-Arrival 1000Cases" 	radiogroup="sampleLogRadio" value="5" style="font-size: 0.85em;"/>	
+										<radio id="r7" label="4Branch Expo(0-100] HI-Arrival 1000Cases" 	radiogroup="sampleLogRadio" value="4" style="font-size: 0.85em;"/>
+									</row>
+									<row>
+										<radio id="r4" label="Paper Example" 						radiogroup="sampleLogRadio" value="6" style="font-size: 0.90em;"/>	
+										<radio id="r8" label="BPI Challenage 2012 [modified]" 		radiogroup="sampleLogRadio" value="3" style="font-size: 0.85em;"/>
+										<cell/>
+									</row>
+								</rows>
+							</grid>
+						</hlayout>
 				</groupbox>
 			</hbox>
 		</groupbox>
-		<hbox spacing="15px"  id="mainVbox" vflex="3.5" hflex="1">
-			<groupbox mold="3d" contentStyle="overflow:auto" hflex="1" vflex="1">
+		
+		<hbox spacing="15px"  id="mainVbox" hflex="3" vflex="1">
+			<groupbox mold="3d" contentStyle="overflow:auto" hflex="1.5" vflex="1">
 				<attribute name="onClick">
 					<![CDATA[arrow2.setSclass("open-" + self.isOpen());]]>
 				</attribute>
@@ -56,50 +81,23 @@
 					<span id="arrow2" class="open-true"/>
 				</caption>
 				<hbox width="100%" height="100%" style="overflow: scroll; margin-left: auto; margin-right: auto;">
-					<!--  <groupbox mold="3d" contentStyle="overflow:auto" hflex="1" vflex="1">
-						<attribute name="onClick">
-							<![CDATA[arrow6.setSclass("open-" + self.isOpen());]]>
-						</attribute>
-						<caption label="Process Model Image" width="100%" sclass="customIcon">
-							<span id="arrow6" class="open-true"/>
-						</caption>
-						<hbox width="100%" height="100%" style="overflow: scroll;">
-					-->
-							<image class="processImageStyle" id="correlationImgage" tooltiptext="Generated Process Model" />
-					<!--  
-						</hbox>
-					</groupbox>
-					<groupbox mold="3d" contentStyle="overflow:auto" hflex="1" vflex="1">
-						<attribute name="onClick">
-							<![CDATA[arrow7.setSclass("open-" + self.isOpen());]]>
-						</attribute>
-						<caption label="Process Model Applet" width="100%" sclass="customIcon">
-							<span id="arrow7" class="open-true"/>
-						</caption>
-						<hbox width="100%" height="100%" style="overflow: scroll;">
-							<applet  height="100%" width="100%" id="processApplet"></applet>
-						</hbox>
-					</groupbox>
-					-->
+					<image class="processImageStyle" id="correlationImgage" tooltiptext="Generated Process Model" />
 				</hbox>
 			</groupbox>
-			<groupbox mold="3d" contentStyle="overflow:auto" hflex="1" vflex="1">
+			
+			<groupbox mold="3d" contentStyle="overflow:auto" hflex="1.5" vflex="1">
 				<attribute name="onClick">
 					<![CDATA[arrow3.setSclass("open-" + self.isOpen());]]>
 				</attribute>
 				<caption label="Log with ID Specification" width="100%" sclass="customIcon">
 					<span id="arrow3" class="open-true" />
 				</caption>
+				
 				<hbox width="100%" height="100%" style="overflow: scroll;">
-					<vbox spacing="15px"  id="specificationVbox" vflex="1" hflex="1">
-						<groupbox mold="3d" contentStyle="overflow:auto" hflex="1" vflex="min" width="90%">
-							<attribute name="onClick">
-								<![CDATA[arrow5.setSclass("open-" + self.isOpen());]]>
-							</attribute>
-							<caption label="Properties" width="100%" sclass="customIcon">
-								<span id="arrow5" class="open-true" />
-							</caption>
-							<vbox width="100%" height="100%" style="overflow: scroll;">
+					<vbox spacing="15px"  id="specificationVbox" hflex="1">
+						<groupbox mold="3d" contentStyle="overflow:auto" hflex="1">
+							
+							<vbox style="overflow: scroll;">
 								<radiogroup id="timeRadio" />
 								<grid id="propertyGrid">
 									<columns>
@@ -131,7 +129,8 @@
 								</grid>
 							</vbox>
 						</groupbox>
-						<groupbox mold="3d" contentStyle="overflow:auto" hflex="1" vflex="2">
+						
+						<groupbox mold="3d" contentStyle="overflow:auto" hflex="1">
 							<attribute name="onClick">
 								<![CDATA[arrow4.setSclass("open-" + self.isOpen());]]>
 							</attribute>
