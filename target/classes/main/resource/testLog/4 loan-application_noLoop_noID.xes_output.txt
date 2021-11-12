@@ -1,2 +1,0 @@
-===***=== Time mapping is set to **EQUAL_SIZE** method. ===***=== 
-# of events in the log: 70425
